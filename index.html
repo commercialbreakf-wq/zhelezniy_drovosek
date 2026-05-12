@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="dark" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ЖЕЛЕЗНЫЙ ДРОВОСЕК — Навигация по страницам</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #151311;
+            color: #e8e1dd;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 48px 24px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .logo-img {
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 176, 204, 0.3);
+            filter: drop-shadow(0 0 25px rgba(255, 176, 204, 0.5));
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 0.9;
+            text-align: left;
+        }
+        .logo span { color: #ffb0cc; }
+        .subtitle {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(232, 225, 221, 0.5);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .main-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .main-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            border: 1px solid #ffb0cc;
+            color: #ffb0cc;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .main-link a::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: #ffb0cc;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 0;
+        }
+        .main-link a:hover::before { transform: translateX(100%); }
+        .main-link a:hover { color: #151311; }
+        .main-link a span { position: relative; z-index: 1; }
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #ffb0cc;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(83, 67, 71, 0.3);
+            width: 100%;
+            max-width: 1200px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .card {
+            background: #1d1b19;
+            border: 1px solid #32302E;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            border-color: #ffb0cc;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(255, 176, 204, 0.08);
+        }
+        .card-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            object-position: top;
+            opacity: 0.8;
+            border-bottom: 1px solid #32302E;
+            transition: transform 0.5s ease, opacity 0.3s ease;
+        }
+        .card:hover .card-img {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 176, 204, 0.15);
+            backdrop-filter: blur(8px);
+            color: #ffb0cc;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            text-transform: uppercase;
+        }
+        .card-body {
+            padding: 18px;
+        }
+        .card-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffb0cc;
+            margin-bottom: 4px;
+        }
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            margin-bottom: 6px;
+        }
+        .card-desc {
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(232, 225, 221, 0.55);
+        }
+        .card-arrow {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #ffb0cc;
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+        }
+        .card:hover .card-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .divider {
+            width: 100%;
+            max-width: 1200px;
+            height: 1px;
+            background: rgba(83, 67, 71, 0.2);
+            margin: 36px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="/images/logo_icon.png" alt="Logo" class="logo-img">
+        <div class="logo">ЖЕЛЕЗНЫЙ<br/><span>ДРОВОСЕК</span></div>
+    </div>
+    <div class="subtitle">Карта страниц сайта</div>
+
+    <div class="main-link">
+        <a href="/hi_tech_style/code.html">
+            <span>Открыть главную страницу</span>
+            <span class="material-symbols-outlined" style="font-size:18px; position:relative; z-index:1;">arrow_forward</span>
+        </a>
+    </div>
+
+    <div class="section-label">Разделы сайта</div>
+    <div class="grid">
+        <a class="card" href="/hi_tech_style/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/hi_tech_style/screen.png" alt="Главная"/>
+                <div class="card-badge">Главная</div>
+            </div>
+            <div class="card-body">
+                <div class="card-number">00</div>
+                <div class="card-title">Главная страница</div>
+                <div class="card-desc">Hero-секция, популярные категории, преимущества, новости и формы обратной связи</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_5/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_5/screen.png" alt="Каталог"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">01</div>
+                <div class="card-title">Каталог металлопроката</div>
+                <div class="card-desc">Список товаров с фильтрами по категориям, размерам и маркам стали</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/product?id=balka-20b1">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_3/screen.png" alt="Карточка товара"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">02</div>
+                <div class="card-title">Карточка товара</div>
+                <div class="card-desc">Балка 20Б1 — характеристики, галерея, калькулятор стоимости</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_1/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_1/screen.png" alt="Калькулятор"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">03</div>
+                <div class="card-title">Калькулятор веса металла</div>
+                <div class="card-desc">Выбор материала, формы и размеров для мгновенного расчёта веса и стоимости</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_6/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_6/screen.png" alt="Услуги резки"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">04</div>
+                <div class="card-title">Услуги резки</div>
+                <div class="card-desc">Лазерная и плазменная резка металла, точность и промышленный сервис</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_2/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_2/screen.png" alt="Сертификаты"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">05</div>
+                <div class="card-title">Сертификаты качества</div>
+                <div class="card-desc">Документы и сертификаты соответствия ГОСТ на продукцию</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_4/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_4/screen.png" alt="Логистика"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">06</div>
+                <div class="card-title">Автопарк и логистика</div>
+                <div class="card-desc">Собственный автопарк, маршруты доставки и условия</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_7/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_7/screen.png" alt="О компании"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">07</div>
+                <div class="card-title">О компании</div>
+                <div class="card-desc">История, производственный цикл, контактная форма и карта</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+        <a class="card" href="/_8/code">
+            <div class="card-img-wrap">
+                <img class="card-img" src="/_8/screen.png" alt="Контакты"/>
+            </div>
+            <div class="card-body">
+                <div class="card-number">08</div>
+                <div class="card-title">Контакты</div>
+                <div class="card-desc">Адреса, телефоны, карта проезда и форма обратной связи</div>
+                <div class="card-arrow">Открыть <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
+
+
+
+

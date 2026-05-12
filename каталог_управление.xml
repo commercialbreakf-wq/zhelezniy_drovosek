@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="header">
+   <Font ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#4472C4" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Каталог">
+  <Table>
+   <Column ss:Width="150"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="250"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Row ss:StyleID="header">
+    <Cell><Data ss:Type="String">Группа</Data></Cell>
+    <Cell><Data ss:Type="String">Категория</Data></Cell>
+    <Cell><Data ss:Type="String">Наименование</Data></Cell>
+    <Cell><Data ss:Type="String">Цена (тонна)</Data></Cell>
+    <Cell><Data ss:Type="String">Цена (ед.)</Data></Cell>
+    <Cell><Data ss:Type="String">Вес</Data></Cell>
+    <Cell><Data ss:Type="String">Ед. измерения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный Н114</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный Н57</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный Н60</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный Н75</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный НС35</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный НС44</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный С10</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный С20</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный С21</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил окрашенный С8</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм Н114</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм Н57</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм Н60</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм Н75</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм НС35</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм НС44</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм С10</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм С20</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм С21</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">Профнастил оцинкованный 0.4мм С8</Data></Cell>
+    <Cell><Data ss:Type="Number">115000</Data></Cell>
+    <Cell><Data ss:Type="Number">518</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм Н114</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм Н57</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм Н60</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм Н75</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм НС35</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм НС44</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм С10</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм С20</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм С21</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Кровля и фасад</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм</Data></Cell>
+    <Cell><Data ss:Type="String">полиэстер односторонний 0.4мм С8</Data></Cell>
+    <Cell><Data ss:Type="Number">125000</Data></Cell>
+    <Cell><Data ss:Type="Number">563</Data></Cell>
+    <Cell><Data ss:Type="String">4.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 0.7</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">420</Data></Cell>
+    <Cell><Data ss:Type="String">5.495</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 0.8</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">480</Data></Cell>
+    <Cell><Data ss:Type="String">6.280</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 0.9</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">540</Data></Cell>
+    <Cell><Data ss:Type="String">7.065</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 1</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">600</Data></Cell>
+    <Cell><Data ss:Type="String">7.850</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 1.2</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">720</Data></Cell>
+    <Cell><Data ss:Type="String">9.420</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 1.3</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">780</Data></Cell>
+    <Cell><Data ss:Type="String">10.205</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 1.5</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">900</Data></Cell>
+    <Cell><Data ss:Type="String">11.775</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 2</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">1199</Data></Cell>
+    <Cell><Data ss:Type="String">15.700</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 2.5</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">1499</Data></Cell>
+    <Cell><Data ss:Type="String">19.625</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Листовой металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк</Data></Cell>
+    <Cell><Data ss:Type="String">Лист хк 3</Data></Cell>
+    <Cell><Data ss:Type="Number">76400</Data></Cell>
+    <Cell><Data ss:Type="Number">1799</Data></Cell>
+    <Cell><Data ss:Type="String">23.550</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 15 2.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">86</Data></Cell>
+    <Cell><Data ss:Type="String">1.079</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 15 2.8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">98</Data></Cell>
+    <Cell><Data ss:Type="String">1.229</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 20 2.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">111</Data></Cell>
+    <Cell><Data ss:Type="String">1.387</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 20 2.8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">126</Data></Cell>
+    <Cell><Data ss:Type="String">1.574</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 25 2.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">135</Data></Cell>
+    <Cell><Data ss:Type="String">1.695</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 25 2.8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">153</Data></Cell>
+    <Cell><Data ss:Type="String">1.920</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 25 3.2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">178</Data></Cell>
+    <Cell><Data ss:Type="String">2.225</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 32 2.8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">192</Data></Cell>
+    <Cell><Data ss:Type="String">2.403</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 32 3.2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">222</Data></Cell>
+    <Cell><Data ss:Type="String">2.778</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 40 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">254</Data></Cell>
+    <Cell><Data ss:Type="String">3.181</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 50 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">313</Data></Cell>
+    <Cell><Data ss:Type="String">3.921</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 50 3.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">368</Data></Cell>
+    <Cell><Data ss:Type="String">4.618</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп</Data></Cell>
+    <Cell><Data ss:Type="String">Труба вгп 50 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">425</Data></Cell>
+    <Cell><Data ss:Type="String">5.327</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 100 50 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">376</Data></Cell>
+    <Cell><Data ss:Type="String">4.710</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 100 50 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">564</Data></Cell>
+    <Cell><Data ss:Type="String">7.065</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 100 50 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">752</Data></Cell>
+    <Cell><Data ss:Type="String">9.420</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 100 50 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">940</Data></Cell>
+    <Cell><Data ss:Type="String">11.775</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 100 60 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">601</Data></Cell>
+    <Cell><Data ss:Type="String">7.536</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 120 60 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">902</Data></Cell>
+    <Cell><Data ss:Type="String">11.304</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 120 60 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1128</Data></Cell>
+    <Cell><Data ss:Type="String">14.130</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 200 100 10</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">3759</Data></Cell>
+    <Cell><Data ss:Type="String">47.100</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 200 100 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1879</Data></Cell>
+    <Cell><Data ss:Type="String">23.550</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 200 100 6</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">2255</Data></Cell>
+    <Cell><Data ss:Type="String">28.260</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 200 100 8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">3007</Data></Cell>
+    <Cell><Data ss:Type="String">37.680</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 40 20 1.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">113</Data></Cell>
+    <Cell><Data ss:Type="String">1.413</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 40 20 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell><Data ss:Type="String">1.884</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 40 20 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">226</Data></Cell>
+    <Cell><Data ss:Type="String">2.826</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 50 25 1.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">141</Data></Cell>
+    <Cell><Data ss:Type="String">1.766</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 50 25 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">282</Data></Cell>
+    <Cell><Data ss:Type="String">3.532</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 60 30 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">226</Data></Cell>
+    <Cell><Data ss:Type="String">2.826</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 60 30 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">338</Data></Cell>
+    <Cell><Data ss:Type="String">4.239</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 80 40 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">301</Data></Cell>
+    <Cell><Data ss:Type="String">3.768</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 80 40 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">451</Data></Cell>
+    <Cell><Data ss:Type="String">5.652</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная</Data></Cell>
+    <Cell><Data ss:Type="String">Труба профильная прямоугольная 80 40 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">601</Data></Cell>
+    <Cell><Data ss:Type="String">7.536</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв 108*3/4/5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">655</Data></Cell>
+    <Cell><Data ss:Type="String">8.212</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв 133*4/5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1078</Data></Cell>
+    <Cell><Data ss:Type="String">13.514</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв 159*4\5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1283</Data></Cell>
+    <Cell><Data ss:Type="String">16.078</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв 57*3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">354</Data></Cell>
+    <Cell><Data ss:Type="String">4.439</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв 76*3/4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">466</Data></Cell>
+    <Cell><Data ss:Type="String">5.844</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв</Data></Cell>
+    <Cell><Data ss:Type="String">Труба эсв 89*3\4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">543</Data></Cell>
+    <Cell><Data ss:Type="String">6.806</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 100 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">752</Data></Cell>
+    <Cell><Data ss:Type="String">9.420</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 100 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1002</Data></Cell>
+    <Cell><Data ss:Type="String">12.560</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 100 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1253</Data></Cell>
+    <Cell><Data ss:Type="String">15.700</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 120 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1203</Data></Cell>
+    <Cell><Data ss:Type="String">15.072</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 120 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1503</Data></Cell>
+    <Cell><Data ss:Type="String">18.840</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 150 10</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">3759</Data></Cell>
+    <Cell><Data ss:Type="String">47.100</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 150 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">1879</Data></Cell>
+    <Cell><Data ss:Type="String">23.550</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 150 7</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">2631</Data></Cell>
+    <Cell><Data ss:Type="String">32.970</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 150 8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">3007</Data></Cell>
+    <Cell><Data ss:Type="String">37.680</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 20 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="String">1.256</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 200 10</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">5011</Data></Cell>
+    <Cell><Data ss:Type="String">62.800</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 200 5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">2506</Data></Cell>
+    <Cell><Data ss:Type="String">31.400</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 200 8</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">4009</Data></Cell>
+    <Cell><Data ss:Type="String">50.240</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 25 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="String">1.570</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 30 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell><Data ss:Type="String">1.884</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 40 1.5</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell><Data ss:Type="String">1.884</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 40 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">2.512</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 40 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">301</Data></Cell>
+    <Cell><Data ss:Type="String">3.768</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 50 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">251</Data></Cell>
+    <Cell><Data ss:Type="String">3.140</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 50 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">376</Data></Cell>
+    <Cell><Data ss:Type="String">4.710</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 60 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">301</Data></Cell>
+    <Cell><Data ss:Type="String">3.768</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 60 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">451</Data></Cell>
+    <Cell><Data ss:Type="String">5.652</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 60 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">601</Data></Cell>
+    <Cell><Data ss:Type="String">7.536</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 70 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">351</Data></Cell>
+    <Cell><Data ss:Type="String">4.396</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 70 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">526</Data></Cell>
+    <Cell><Data ss:Type="String">6.594</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 80 2</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">401</Data></Cell>
+    <Cell><Data ss:Type="String">5.024</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 80 3</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">601</Data></Cell>
+    <Cell><Data ss:Type="String">7.536</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Трубный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная</Data></Cell>
+    <Cell><Data ss:Type="String">профиль квадратная 80 4</Data></Cell>
+    <Cell><Data ss:Type="Number">79800</Data></Cell>
+    <Cell><Data ss:Type="Number">802</Data></Cell>
+    <Cell><Data ss:Type="String">10.048</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 10 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell><Data ss:Type="String">0.617</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 12 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">52</Data></Cell>
+    <Cell><Data ss:Type="String">0.888</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 14 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">71</Data></Cell>
+    <Cell><Data ss:Type="String">1.209</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 20 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">144</Data></Cell>
+    <Cell><Data ss:Type="String">2.468</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 22 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">175</Data></Cell>
+    <Cell><Data ss:Type="String">2.986</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 25 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">226</Data></Cell>
+    <Cell><Data ss:Type="String">3.856</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 6 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">0.222</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1 8 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell><Data ss:Type="String">0.395</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а116 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">4857</Data></Cell>
+    <Cell><Data ss:Type="String">83.024</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а1</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а118 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">5026</Data></Cell>
+    <Cell><Data ss:Type="String">85.911</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 10 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell><Data ss:Type="String">0.617</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 12 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">52</Data></Cell>
+    <Cell><Data ss:Type="String">0.888</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 14 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">71</Data></Cell>
+    <Cell><Data ss:Type="String">1.209</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 16 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">92</Data></Cell>
+    <Cell><Data ss:Type="String">1.580</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 18 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">117</Data></Cell>
+    <Cell><Data ss:Type="String">1.999</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 20 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">144</Data></Cell>
+    <Cell><Data ss:Type="String">2.468</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 22 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">175</Data></Cell>
+    <Cell><Data ss:Type="String">2.986</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 25 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">226</Data></Cell>
+    <Cell><Data ss:Type="String">3.856</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 6 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">0.222</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3</Data></Cell>
+    <Cell><Data ss:Type="String">Арматура а3 8 м</Data></Cell>
+    <Cell><Data ss:Type="Number">58500</Data></Cell>
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell><Data ss:Type="String">0.395</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 10б1</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">797</Data></Cell>
+    <Cell><Data ss:Type="String">9.460</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 12б1</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">968</Data></Cell>
+    <Cell><Data ss:Type="String">11.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 12б2</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">968</Data></Cell>
+    <Cell><Data ss:Type="String">11.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 14б1</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1154</Data></Cell>
+    <Cell><Data ss:Type="String">13.700</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 14б2</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1154</Data></Cell>
+    <Cell><Data ss:Type="String">13.700</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 16б1</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1330</Data></Cell>
+    <Cell><Data ss:Type="String">15.800</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 18б1</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1583</Data></Cell>
+    <Cell><Data ss:Type="String">18.800</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 18б2</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1583</Data></Cell>
+    <Cell><Data ss:Type="String">18.800</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 20б1</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1793</Data></Cell>
+    <Cell><Data ss:Type="String">21.300</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Балка</Data></Cell>
+    <Cell><Data ss:Type="String">Балка 20б2</Data></Cell>
+    <Cell><Data ss:Type="Number">84200</Data></Cell>
+    <Cell><Data ss:Type="Number">1793</Data></Cell>
+    <Cell><Data ss:Type="String">21.300</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 3 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 150*150*3</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 3 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 200*200*3</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 3 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 50*50*3</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 3 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка100*100*3</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 4 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 150*150*4</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 4 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 200*200*4</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 4 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 50*50*4</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 4 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка100*100*4</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 5 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 150*150*5</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 5 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 200*200*5</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 5 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 50*50*5</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 5 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка100*100*5</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 8 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 150*150*8</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 8 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 200*200*8</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 8 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 50*50*8</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка 8 м</Data></Cell>
+    <Cell><Data ss:Type="String">Сетка100*100*8</Data></Cell>
+    <Cell><Data ss:Type="Number">98000</Data></Cell>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">3.500</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА М.КВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 100 7</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">764</Data></Cell>
+    <Cell><Data ss:Type="String">10.990</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 100 8</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">873</Data></Cell>
+    <Cell><Data ss:Type="String">12.560</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 100 9</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">982</Data></Cell>
+    <Cell><Data ss:Type="String">14.130</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 25 3</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">82</Data></Cell>
+    <Cell><Data ss:Type="String">1.177</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 32 3</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">105</Data></Cell>
+    <Cell><Data ss:Type="String">1.507</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 40 3</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">131</Data></Cell>
+    <Cell><Data ss:Type="String">1.884</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 40 4</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">175</Data></Cell>
+    <Cell><Data ss:Type="String">2.512</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 50 3</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">164</Data></Cell>
+    <Cell><Data ss:Type="String">2.355</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 50 4</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">218</Data></Cell>
+    <Cell><Data ss:Type="String">3.140</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 63 4</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">275</Data></Cell>
+    <Cell><Data ss:Type="String">3.956</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 63 5</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">344</Data></Cell>
+    <Cell><Data ss:Type="String">4.946</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 70 5</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">382</Data></Cell>
+    <Cell><Data ss:Type="String">5.495</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 70 6</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">458</Data></Cell>
+    <Cell><Data ss:Type="String">6.594</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 70 7</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">535</Data></Cell>
+    <Cell><Data ss:Type="String">7.693</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 90 6</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">589</Data></Cell>
+    <Cell><Data ss:Type="String">8.478</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 90 7</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">687</Data></Cell>
+    <Cell><Data ss:Type="String">9.891</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок</Data></Cell>
+    <Cell><Data ss:Type="String">Уголок 90 8</Data></Cell>
+    <Cell><Data ss:Type="Number">69500</Data></Cell>
+    <Cell><Data ss:Type="Number">786</Data></Cell>
+    <Cell><Data ss:Type="String">11.304</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 10п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">651</Data></Cell>
+    <Cell><Data ss:Type="String">8.590</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 10у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">651</Data></Cell>
+    <Cell><Data ss:Type="String">8.590</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 12п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">788</Data></Cell>
+    <Cell><Data ss:Type="String">10.400</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 12у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">788</Data></Cell>
+    <Cell><Data ss:Type="String">10.400</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 14п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">932</Data></Cell>
+    <Cell><Data ss:Type="String">12.300</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 14у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">932</Data></Cell>
+    <Cell><Data ss:Type="String">12.300</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 16п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1076</Data></Cell>
+    <Cell><Data ss:Type="String">14.200</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 16у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1076</Data></Cell>
+    <Cell><Data ss:Type="String">14.200</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 18п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1236</Data></Cell>
+    <Cell><Data ss:Type="String">16.300</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 18у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1236</Data></Cell>
+    <Cell><Data ss:Type="String">16.300</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 20п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1395</Data></Cell>
+    <Cell><Data ss:Type="String">18.400</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 20у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1395</Data></Cell>
+    <Cell><Data ss:Type="String">18.400</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 22п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1516</Data></Cell>
+    <Cell><Data ss:Type="String">20.000</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 22у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1516</Data></Cell>
+    <Cell><Data ss:Type="String">20.000</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 24п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1516</Data></Cell>
+    <Cell><Data ss:Type="String">20.000</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 24у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">1516</Data></Cell>
+    <Cell><Data ss:Type="String">20.000</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 8 п</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">534</Data></Cell>
+    <Cell><Data ss:Type="String">7.050</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Черный металлопрокат</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер</Data></Cell>
+    <Cell><Data ss:Type="String">Швеллер 8у</Data></Cell>
+    <Cell><Data ss:Type="Number">75800</Data></Cell>
+    <Cell><Data ss:Type="Number">534</Data></Cell>
+    <Cell><Data ss:Type="String">7.050</Data></Cell>
+    <Cell><Data ss:Type="String">ЗА МЕТР</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="dark" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Карточка товара — ЖЕЛЕЗНЫЙ ДРОВОСЕК</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "outline-variant":"#534347","surface-container-lowest":"#0f0e0c",
+        "surface-container-highest":"#373431","primary-container":"#cf7498",
+        "surface-container-high":"#2c2a27","on-surface-variant":"#d7c1c7",
+        "on-surface":"#e7e2dd","surface-container-low":"#1d1b19",
+        "surface-container":"#211f1d","primary":"#ffb0cc","surface":"#151311",
+        "on-background":"#e7e2dd","on-primary":"#5a1536","background":"#151311",
+        "outline":"#a08c91"
+      },
+      spacing: {
+        "margin-edge":"64px",
+        "margin-edge-mobile":"20px",
+        "section-gap":"160px",
+        "section-gap-mobile":"80px",
+        "gutter":"24px",
+        "container-max":"1440px"
+      },
+      fontFamily: {"body-md":["Inter", "sans-serif"],"label-caps":["Space Grotesk", "sans-serif"],"headline-md":["Space Grotesk", "sans-serif"],"display-xl":["Space Grotesk", "sans-serif"]},
+
+      fontSize: {
+        "body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],
+        "label-caps":["14px",{"lineHeight":"20px","letterSpacing":"0.1em","fontWeight":"600"}],
+        "body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],
+        "headline-md":["48px",{"lineHeight":"56px","fontWeight":"500"}],
+        "display-xl":["80px",{"lineHeight":"80px","letterSpacing":"-0.04em","fontWeight":"700"}]
+      }
+    }
+  }
+}
+</script>
+<script src="/js/shared-ui.js"></script>
+<script src="/js/product-images.js"></script>
+</head>
+<body class="font-body-md bg-background text-on-background selection:bg-primary selection:text-on-primary">
+
+<!-- Shared Header -->
+
+<main class="pt-24 md:pt-32 pb-16 md:pb-24 max-w-container-max mx-auto px-margin-edge-mobile md:px-margin-edge">
+
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Breadcrumbs -->
+<nav id="breadcrumbs" class="col-span-12 mb-8 flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant fade-in"></nav>
+
+<!-- Product Image -->
+<div class="col-span-12 lg:col-span-7 flex flex-col fade-in" style="animation-delay:.1s">
+<div class="aspect-[4/3] w-full overflow-hidden border border-outline-variant/10 group relative mb-6 bg-surface-container">
+<img id="productImg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="" alt=""/>
+<div id="productBadge" class="absolute top-6 left-6 bg-surface/40 backdrop-blur-md px-4 py-2 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary">ГОСТ / ТУ</span>
+</div>
+</div>
+<section class="space-y-6 mt-6">
+<h2 class="font-label-caps text-label-caps text-primary uppercase">ОПИСАНИЕ ПРОДУКТА</h2>
+<p id="productDesc" class="text-on-surface-variant"></p>
+</section>
+</div>
+
+<!-- Product Details -->
+<div class="col-span-12 lg:col-span-5 space-y-8 md:space-y-10 lg:pl-12 fade-in" style="animation-delay:.2s">
+<header>
+<p id="productCategory" class="font-label-caps text-[12px] md:text-label-caps text-on-surface-variant mb-2"></p>
+<h1 id="productName" class="text-[28px] md:text-[36px] lg:text-[44px] font-display-xl uppercase leading-tight mb-6"></h1>
+<p id="productSubtitle" class="font-body-lg text-body-lg text-on-surface-variant max-w-md opacity-80"></p>
+</header>
+
+
+<!-- Specs -->
+<section class="space-y-4">
+<h3 class="font-label-caps text-label-caps text-primary">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h3>
+<div id="specsTable" class="border-t border-outline-variant/20"></div>
+</section>
+
+<!-- Calculator -->
+<section class="glass-panel p-6 md:p-8 space-y-6 bg-surface-container/50 border border-outline-variant/10">
+<h3 class="font-label-caps text-label-caps text-primary">КАЛЬКУЛЯТОР СТОИМОСТИ</h3>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2 text-[12px] uppercase tracking-widest opacity-60">КОЛИЧЕСТВО</label>
+<div class="flex items-center bg-surface-container border border-outline-variant/10 overflow-hidden h-20 group hover:border-primary/30 transition-all">
+    <input id="calcQty" class="w-40 bg-transparent border-none text-left pl-8 font-bold text-on-surface outline-none text-[42px] h-full" type="text" value="1.00" inputmode="decimal"/>
+    <span id="calcUnit" class="text-on-surface-variant font-label-caps text-sm tracking-widest flex-1 opacity-50 uppercase">ТОНН</span>
+    <div class="flex flex-col h-full w-24 border-l border-white/5 bg-white/5">
+        <button onclick="stepQty(1)" class="flex-1 flex items-center justify-center hover:bg-primary/20 transition-colors border-b border-white/5 group/btn">
+            <span class="material-symbols-outlined text-primary text-[36px] group-hover/btn:scale-125 transition-transform">expand_less</span>
+        </button>
+        <button onclick="stepQty(-1)" class="flex-1 flex items-center justify-center hover:bg-primary/20 transition-colors group/btn">
+            <span class="material-symbols-outlined text-primary text-[36px] group-hover/btn:scale-125 transition-transform">expand_more</span>
+        </button>
+    </div>
+    <p id="qtyLimitMsg" class="text-[10px] text-primary font-bold mt-2 hidden animate-pulse uppercase tracking-wider">Максимум 1000 т в одном заказе. Для более крупного заказа оставьте заявку.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-4">
+<span class="font-label-caps text-[10px] text-on-surface-variant block uppercase" id="priceLabel1">Цена за тонну</span>
+<span class="font-headline-md text-[20px] md:text-[24px] text-on-surface" id="priceValue1"></span>
+</div>
+<div class="bg-surface-container p-4">
+<span class="font-label-caps text-[10px] text-on-surface-variant block uppercase" id="priceLabel2">За метр</span>
+<span class="font-headline-md text-[20px] md:text-[24px] text-on-surface" id="priceValue2"></span>
+</div>
+</div>
+<div class="pt-4">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">ИТОГО К ОПЛАТЕ</span>
+<span class="text-[32px] md:text-[40px] lg:text-[48px] font-display-xl text-primary leading-none whitespace-nowrap" id="totalPrice"></span>
+</div>
+
+<button onclick="addToCart('${product.id}')" class="w-full h-16 bg-transparent border border-primary text-primary font-label-caps text-label-caps tracking-widest relative overflow-hidden group pink-glow transition-all duration-500">
+<span class="relative z-10 transition-colors duration-500 group-hover:text-on-primary">В КОРЗИНУ</span>
+<div class="absolute top-0 left-0 w-0 h-full bg-primary transition-all duration-500 group-hover:w-full -z-0"></div>
+</button>
+</div>
+</section>
+
+<!-- Back to catalog -->
+<a href="/_5/code.html" class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps">
+<span class="material-symbols-outlined">arrow_back</span> НАЗАД В КАТАЛОГ
+</a>
+</div>
+</div>
+
+<!-- Related Products -->
+<section class="mt-24 fade-in" style="animation-delay:.3s">
+<h2 class="font-label-caps text-label-caps text-primary mb-8 border-l-2 border-primary pl-4">ПОХОЖИЕ ТОВАРЫ</h2>
+<div id="relatedGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"></div>
+</section>
+</main>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const productId = params.get('id');
+
+async function init() {
+  if (!productId) {
+    showNotFound();
+    return;
+  }
+
+  try {
+    const res = await fetch(`/api/products/${productId}`);
+    if (!res.ok) throw new Error();
+    const product = await res.json();
+    renderProduct(product);
+    loadRelated(product.category, product.id);
+  } catch (e) {
+    showNotFound();
+  }
+}
+
+function showNotFound() {
+  document.querySelector('main').innerHTML = `
+    <div class="text-center py-32">
+      <p class="text-6xl mb-8">🔍</p>
+      <h1 class="text-3xl font-bold mb-4">Товар не найден</h1>
+      <a href="/_5/code.html" class="text-primary hover:underline font-label-caps">← ВЕРНУТЬСЯ В КАТАЛОГ</a>
+    </div>`;
+}
+
+let currentProduct = null;
+
+function renderProduct(product) {
+  currentProduct = product;
+  document.title = product.name + ' — ЖЕЛЕЗНЫЙ ДРОВОСЕК';
+
+  document.getElementById('breadcrumbs').innerHTML = `
+    <a class="hover:text-primary" href="/_5/code.html">КАТАЛОГ</a>
+    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+    <a class="hover:text-primary" href="/_5/code.html">${product.category.toUpperCase()}</a>
+    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+    <span class="text-primary">${product.name.toUpperCase()}</span>`;
+
+  document.getElementById('productImg').src = window.getProductImage ? window.getProductImage(product.category) : product.image;
+  document.getElementById('productImg').alt = product.name;
+  document.getElementById('productBadge').querySelector('span').textContent = 'ГОСТ / ТУ';
+  document.getElementById('productCategory').textContent = product.category.toUpperCase();
+  document.getElementById('productName').textContent = product.name;
+  document.getElementById('productSubtitle').textContent = (product.type || 'Ст3') + (product.length ? ', длина ' + product.length : '');
+  document.getElementById('productDesc').textContent = product.description;
+
+  // Specs
+  const specsHtml = product.specs.map(([label, value]) => `
+    <div class="flex justify-between py-4 border-b border-outline-variant/10">
+      <span class="text-on-surface-variant">${label}</span>
+      <span class="font-semibold ${label === 'Марка стали' || label === 'Класс' || label === 'Покрытие' ? 'text-primary' : ''}">${value}</span>
+    </div>`).join('');
+  document.getElementById('specsTable').innerHTML = specsHtml;
+
+  // Calculator
+  const hasTonPrice = product.price_ton > 0;
+  const calcUnit = document.getElementById('calcUnit');
+  const calcQty = document.getElementById('calcQty');
+  
+  if (hasTonPrice) {
+    calcUnit.textContent = 'Т';
+    document.getElementById('priceLabel1').textContent = 'Цена за тонну';
+    document.getElementById('priceValue1').textContent = product.price_ton.toLocaleString('ru-RU', {minimumFractionDigits: 2}) + ' ₽';
+    document.getElementById('priceLabel2').textContent = product.unit_label;
+    document.getElementById('priceValue2').textContent = product.price_unit.toLocaleString('ru-RU', {minimumFractionDigits: 2}) + ' ₽';
+    calcQty.value = "1.00";
+  } else {
+    calcUnit.textContent = 'М²';
+    document.getElementById('priceLabel1').textContent = product.unit_label;
+    document.getElementById('priceValue1').textContent = product.price_unit.toLocaleString('ru-RU', {minimumFractionDigits: 2}) + ' ₽';
+    document.getElementById('priceLabel2').textContent = '';
+    document.getElementById('priceValue2').textContent = '';
+    calcQty.value = "1.00";
+  }
+
+  function updateTotal() {
+    let qty = parseFloat(calcQty.value.replace(',', '.')) || 0;
+    const limitMsg = document.getElementById('qtyLimitMsg');
+    
+    if (hasTonPrice && qty >= 1000) { 
+        qty = 1000; 
+        calcQty.value = "1000.00"; 
+        if (limitMsg) limitMsg.classList.remove('hidden');
+    } else {
+        if (limitMsg) limitMsg.classList.add('hidden');
+    }
+    
+    let total;
+    if (hasTonPrice) {
+      total = qty * product.price_ton;
+    } else {
+      total = qty * product.price_unit;
+    }
+    
+    const priceEl = document.getElementById('totalPrice');
+    const priceStr = total.toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₽';
+    priceEl.textContent = priceStr;
+    
+    // Auto-shrink font size if text is too long
+    if (priceStr.length > 15) priceEl.style.fontSize = '32px';
+    else if (priceStr.length > 12) priceEl.style.fontSize = '38px';
+    else priceEl.style.fontSize = ''; // Default from class
+  }
+  
+  window.stepQty = function(delta) {
+    const input = document.getElementById('calcQty');
+    let val = parseFloat(input.value.replace(',', '.')) || 0;
+    const step = hasTonPrice ? 0.1 : 1;
+    
+    if (hasTonPrice && delta > 0 && val >= 1000) {
+        updateTotal(); // Show message
+        return;
+    }
+    
+    val = Math.max(0, val + (delta * step));
+    if (hasTonPrice) val = Math.min(1000, val);
+    input.value = val.toFixed(2);
+    updateTotal();
+  };
+
+  calcQty.addEventListener('input', updateTotal);
+  calcQty.addEventListener('blur', () => {
+      let val = parseFloat(calcQty.value.replace(',', '.')) || 0;
+      if (hasTonPrice) val = Math.min(1000, val);
+      calcQty.value = val.toFixed(2);
+      updateTotal();
+  });
+  updateTotal();
+  
+  document.querySelector('button.pink-glow').setAttribute('onclick', 'addToCart()');
+}
+
+async function loadRelated(category, currentId) {
+    try {
+        const res = await fetch(`/api/products?category=${encodeURIComponent(category)}&limit=5`);
+        const data = await res.json();
+        const related = data.products.filter(p => p.id !== currentId).slice(0, 4);
+
+        document.getElementById('relatedGrid').innerHTML = related.map(p => `
+            <a href="/product?id=${p.id}" class="border border-outline-variant/10 p-5 bg-surface-container-lowest flex flex-col group transition-all duration-500 hover:border-primary/30 no-underline text-inherit">
+                <div class="relative h-36 mb-4 overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" src="${window.getProductImage ? window.getProductImage(p.category) : p.img}" alt="${p.name}"/>
+                </div>
+                <h4 class="font-headline-md text-sm font-semibold text-on-surface mb-1 line-clamp-1">${p.name}</h4>
+                <p class="text-on-surface-variant text-xs mb-3">${p.type || 'Ст3'}</p>
+                <p class="text-primary font-bold mt-auto">${p.price_ton ? p.price_ton.toLocaleString() + ' ₽/т' : p.price_unit.toLocaleString() + ' ₽'}</p>
+            </a>`).join('');
+    } catch (e) { console.error('Failed to load related', e); }
+}
+
+window.addToCart = function() {
+    if (!currentProduct) return;
+    const qtyInput = document.getElementById('calcQty');
+    const qty = parseFloat(qtyInput.value) || 0;
+    if (qty <= 0) return;
+
+    let cart = JSON.parse(localStorage.getItem('metal_cart') || '[]');
+    
+    let price, unit, finalQty;
+    if (currentProduct.price_ton) {
+        price = currentProduct.price_ton;
+        unit = 'т';
+        finalQty = qty;
+    } else {
+        price = currentProduct.price_unit;
+        unit = currentProduct.unit_label.split(' ')[1] || 'ед.';
+        finalQty = qty;
+    }
+    
+    const existing = cart.find(item => item.id === currentProduct.id);
+    if (existing) {
+      existing.qty = (parseFloat(existing.qty) + finalQty).toFixed(2);
+    } else {
+      cart.push({ 
+        id: currentProduct.id, 
+        qty: finalQty.toFixed(2), 
+        name: currentProduct.name, 
+        price: price, 
+        unit: unit
+      });
+    }
+    localStorage.setItem('metal_cart', JSON.stringify(cart));
+    if (window.updateGlobalCartBadge) window.updateGlobalCartBadge();
+    if (window.toggleCartDrawerGlobal) window.toggleCartDrawerGlobal();
+    
+    const btn = document.querySelector('button.pink-glow');
+    if (btn) {
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = '<span class="relative z-10 transition-colors duration-500 text-on-primary font-label-caps">ДОБАВЛЕНО!</span><div class="absolute top-0 left-0 w-full h-full bg-primary -z-0"></div>';
+        setTimeout(() => { btn.innerHTML = originalContent; }, 2000);
+    }
+}
+
+function toggleAuthModal() {
+    window.location.href = '/cart.html';
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="dark" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>404 — Страница не найдена | ЖЕЛЕЗНЫЙ ДРОВОСЕК</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="/js/shared-ui.js"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "error": "#ffb4ab",
+                        "outline-variant": "#534347",
+                        "surface-container-lowest": "#0f0e0c",
+                        "on-tertiary-container": "#282a2a",
+                        "surface-container-highest": "#373431",
+                        "primary-container": "#cf7498",
+                        "surface-container-high": "#2c2a27",
+                        "on-secondary": "#660029",
+                        "on-surface-variant": "#d7c1c7",
+                        "surface-tint": "#ffb0cc",
+                        "on-surface": "#e7e2dd",
+                        "on-primary-container": "#520d2f",
+                        "inverse-primary": "#944365",
+                        "inverse-on-surface": "#32302d",
+                        "surface-container-low": "#1d1b19",
+                        "tertiary": "#c6c6c7",
+                        "on-primary": "#5a1536",
+                        "surface-variant": "#373431",
+                        "on-secondary-fixed-variant": "#8e093d",
+                        "surface-container": "#211f1d",
+                        "primary-fixed": "#ffd9e4",
+                        "primary": "#ffb0cc",
+                        "on-secondary-fixed": "#3f0017",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary-container": "#8e093d",
+                        "surface": "#151311",
+                        "on-background": "#e7e2dd",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-dim": "#151311",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#ff96ad",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#ffb1c0",
+                        "inverse-surface": "#e7e2dd",
+                        "primary-fixed-dim": "#ffb0cc",
+                        "outline": "#a08c91",
+                        "surface-bright": "#3b3936",
+                        "on-primary-fixed": "#3e0020",
+                        "secondary-fixed-dim": "#ffb1c0",
+                        "background": "#151311",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-container": "#909191",
+                        "on-primary-fixed-variant": "#772c4d",
+                        "secondary-fixed": "#ffd9df"
+                },
+                "spacing": {
+                        "margin-edge": "64px",
+                        "margin-edge-mobile": "20px",
+                        "section-gap": "160px",
+                        "section-gap-mobile": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-max": "1440px"
+                },
+                "fontFamily": {
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-caps": ["Space Grotesk", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "display-xl": ["Space Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Space Grotesk", "sans-serif"]
+                }
+              }
+            }
+          }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glitch-text {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        .bg-industrial {
+            background-image: linear-gradient(rgba(21, 19, 17, 0.8), rgba(21, 19, 17, 0.8)), url('/industrial_404_bg_1778612131862.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .pink-slide {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .pink-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #ffb0cc;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+        .pink-slide:hover::after {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- Header is injected by shared-ui.js -->
+
+    <main class="relative min-h-screen flex items-center justify-center pt-20 bg-industrial">
+        <div class="px-margin-edge-mobile md:px-margin-edge w-full max-w-container-max mx-auto text-center relative z-10">
+            <div class="space-y-8">
+                <div class="relative inline-block">
+                    <h1 class="text-[120px] md:text-[240px] font-display-xl leading-none opacity-10 select-none">404</h1>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="font-label-caps text-primary tracking-[0.4em] uppercase text-sm md:text-lg glitch-text">Ошибка доступа к объекту</span>
+                    </div>
+                </div>
+                
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <h2 class="text-4xl md:text-6xl font-display-xl uppercase leading-tight">МЕТАЛЛ <span class="text-primary">НЕ ОБНАРУЖЕН</span></h2>
+                    <p class="text-on-surface-variant font-body-lg text-lg md:text-xl opacity-80">
+                        Похоже, запрашиваемая страница была перемещена в архив или никогда не существовала в нашей базе данных.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-12">
+                    <a href="/hi_tech_style/code.html" class="pink-slide px-12 py-5 bg-transparent border border-primary text-primary font-label-caps text-sm tracking-[0.2em] uppercase hover:text-surface transition-colors duration-500 no-underline">
+                        ВЕРНУТЬСЯ НА ГЛАВНУЮ
+                    </a>
+                    <a href="javascript:history.back()" class="px-12 py-5 bg-surface-container border border-outline-variant/30 text-on-surface font-label-caps text-sm tracking-[0.2em] uppercase hover:border-primary transition-colors no-underline">
+                        НАЗАД
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative industrial elements -->
+        <div class="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
+    </main>
+
+    <footer id="globalFooter"></footer>
+
+    <script>
+        // Shared UI scripts might need manual triggers if they don't auto-run perfectly
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.updateGlobalCartBadge) window.updateGlobalCartBadge();
+        });
+    </script>
+</body>
+</html>
