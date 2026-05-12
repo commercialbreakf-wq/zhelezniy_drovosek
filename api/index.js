@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const dbPath = path.join(__dirname, '..', 'database.sqlite');
+const dbPath = path.resolve(process.cwd(), 'database.sqlite');
 console.log('Database path:', dbPath);
 console.log('Database exists:', fs.existsSync(dbPath));
 
@@ -328,14 +328,16 @@ const nodemailer = require('nodemailer');
 
 // Email configuration (Mock for now, but configured for SMTP)
 const transporter = nodemailer.createTransport({
-  host: 'smtp.mail.ru', // Adjust as needed
+  host: 'smtp.mail.ru',
   port: 465,
   secure: true,
   auth: {
-    user: 'info@steelwoodman.ru', // User's email
-    pass: 'your-app-password' // Should be an environment variable
+    user: 'info@steelwoodman.ru',
+    pass: process.env.SMTP_PASS || 'your-app-password'
   }
 });
+
+const ADMIN_EMAILS = ['info@steelwoodman.ru', 'egapega1337@gmail.com'];
 
 // Middleware to verify JWT
 const authenticateToken = (req, res, next) => {
@@ -452,7 +454,7 @@ app.post('/api/orders', authenticateToken, async (req, res) => {
     const itemsHtml = items.map(item => `<li>${item.name || item.id} x ${item.quantity} - ${item.price} ₽</li>`).join('');
     const mailOptions = {
       from: 'info@steelwoodman.ru',
-      to: 'info@steelwoodman.ru',
+      to: ADMIN_EMAILS.join(', '),
       subject: `Новый заказ #${orderId} - ${name}`,
       html: `
         <h2>Новый заказ на сайте</h2>
@@ -504,7 +506,7 @@ app.post('/api/leads', (req, res) => {
 
     const mailOptions = {
       from: 'info@steelwoodman.ru',
-      to: 'info@steelwoodman.ru',
+      to: ADMIN_EMAILS.join(', '),
       subject: `Заявка №${leadId} ${phone}`,
       text: `Новая заявка на сайте\n\nНомер: ${leadId}\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email}\nТип: ${type}\nСообщение: ${message}`,
       html: `
