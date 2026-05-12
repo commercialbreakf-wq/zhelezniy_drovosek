@@ -209,7 +209,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'info@steelwoodman.ru',
+    user: 'egapega322@mail.ru',
     pass: process.env.SMTP_PASS || 'your-app-password'
   }
 });
@@ -259,7 +259,7 @@ app.post('/api/orders', authenticateToken, async (req, res) => {
   // Email sending...
   const itemsHtml = items.map(item => `<li>${item.name || item.id} x ${item.quantity} - ${item.price} ₽</li>`).join('');
   const mailOptions = {
-    from: 'info@steelwoodman.ru',
+    from: 'egapega322@mail.ru',
     to: ADMIN_EMAILS.join(', '),
     subject: `Новый заказ #${order.id} - ${name}`,
     html: `<h2>Новый заказ #${order.id}</h2><p>Клиент: ${name}</p><ul>${itemsHtml}</ul><p>Итого: ${total} ₽</p>`
@@ -275,7 +275,7 @@ app.post('/api/leads', async (req, res) => {
   if (error) return res.status(500).json({ error: error.message });
 
   const mailOptions = {
-    from: 'info@steelwoodman.ru',
+    from: 'egapega322@mail.ru',
     to: ADMIN_EMAILS.join(', '),
     subject: `Заявка №${data.id} ${phone}`,
     html: `<h2>Новая заявка №${data.id}</h2><p>Имя: ${name}</p><p>Тел: ${phone}</p><p>Сообщение: ${message}</p>`
