@@ -25,11 +25,15 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
-    env: process.env.NODE_ENV,
-    dbPath,
-    dbExists: fs.existsSync(dbPath)
+  db.get("SELECT COUNT(*) as count FROM products", (err, row) => {
+    res.json({ 
+      status: 'ok', 
+      env: process.env.NODE_ENV,
+      dbPath,
+      dbExists: fs.existsSync(dbPath),
+      dbError: err ? err.message : null,
+      productCount: row ? row.count : 0
+    });
   });
 });
 
