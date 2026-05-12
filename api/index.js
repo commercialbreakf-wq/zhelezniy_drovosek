@@ -8,11 +8,30 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const db = new sqlite3.Database(path.join(__dirname, 'database.sqlite'));
+const dbPath = path.join(__dirname, '..', 'database.sqlite');
+console.log('Database path:', dbPath);
+console.log('Database exists:', fs.existsSync(dbPath));
+
+const db = new sqlite3.Database(dbPath, (err) => {
+  if (err) {
+    console.error('Database opening error:', err.message);
+  } else {
+    console.log('Connected to the SQLite database.');
+  }
+});
 const SECRET_KEY = 'iron-woodman-secret';
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    env: process.env.NODE_ENV,
+    dbPath,
+    dbExists: fs.existsSync(dbPath)
+  });
+});
 
 // Logging & Clean URL Middleware
 app.use((req, res, next) => {
@@ -30,11 +49,21 @@ app.use((req, res, next) => {
     return res.redirect(301, '/');
   }
 
+  // Legacy redirects
+  if (req.path === '/_5/code') return res.redirect(301, '/catalog');
+  if (req.path === '/_1/code') return res.redirect(301, '/calculator');
+  if (req.path === '/_2/code') return res.redirect(301, '/certificates');
+  if (req.path === '/_4/code') return res.redirect(301, '/logistics');
+  if (req.path === '/_6/code') return res.redirect(301, '/services');
+  if (req.path === '/_7/code') return res.redirect(301, '/about');
+  if (req.path === '/_8/code') return res.redirect(301, '/contacts');
+  if (req.path === '/hi_tech_style/code') return res.redirect(301, '/');
+
   next();
 });
 
-// Serve static files from the project root with .html extension support
-app.use(express.static(path.join(__dirname), {
+// Serve static files from the project root
+app.use(express.static(path.join(__dirname, '..'), {
   extensions: ['html']
 }));
 
@@ -500,11 +529,11 @@ app.post('/api/leads', (req, res) => {
 
 // Route for specific pages if needed
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, '404.html'));
+  res.status(404).sendFile(path.join(__dirname, '..', '404.html'));
 });
 
 if (process.env.NODE_ENV !== 'production') {

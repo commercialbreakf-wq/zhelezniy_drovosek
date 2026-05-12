@@ -58,7 +58,7 @@ tailwind.config = {
 <!-- Breadcrumbs & Search -->
 <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-12 gap-6">
 <nav id="breadcrumbs" class="flex items-center gap-2 font-label-caps text-[11px] md:text-[12px] text-on-surface-variant overflow-x-auto whitespace-nowrap pb-2 md:pb-0">
-<a class="hover:text-primary transition-colors no-underline" href="/hi_tech_style/code.html">ГЛАВНАЯ</a>
+<a class="hover:text-primary transition-colors no-underline" href="/">ГЛАВНАЯ</a>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
 <span class="cursor-pointer hover:text-primary transition-colors" onclick="resetFilters()">КАТАЛОГ</span>
 </nav>
@@ -216,7 +216,7 @@ async function fetchProducts() {
 function updateBreadcrumbs() {
     const nav = document.getElementById('breadcrumbs');
     let html = `
-        <a class="hover:text-primary transition-colors no-underline" href="/hi_tech_style/code.html">ГЛАВНАЯ</a>
+        <a class="hover:text-primary transition-colors no-underline" href="/">ГЛАВНАЯ</a>
         <span class="material-symbols-outlined text-[14px]">chevron_right</span>
         <span class="cursor-pointer hover:text-primary transition-colors" onclick="resetFilters()">КАТАЛОГ</span>
     `;
@@ -336,13 +336,27 @@ function renderFilters() {
 }
 
 function toggleSection(section) {
+    const categories = filterData.categories[section] || [];
     const idx = activeFilters.parentCategory.indexOf(section);
+    
     if (idx > -1) {
         activeFilters.parentCategory.splice(idx, 1);
         openSections.delete(section);
+        // Remove all its subcategories
+        categories.forEach(cat => {
+            const cIdx = activeFilters.category.indexOf(cat.name);
+            if (cIdx > -1) activeFilters.category.splice(cIdx, 1);
+        });
     } else {
         activeFilters.parentCategory.push(section);
         openSections.add(section);
+        // Add all its subcategories
+        categories.forEach(cat => {
+            if (!activeFilters.category.includes(cat.name)) {
+                activeFilters.category.push(cat.name);
+                loadCategoryFilters(cat.name);
+            }
+        });
     }
     renderFilters();
     applyFilters();
@@ -592,10 +606,11 @@ function addToCart(id) {
 }
 
 function toggleAuthModal() {
-    window.location.href = '/cart.html';
+    window.location.href = '/';
 }
 
 updateCartBadge();
 </script>
 </body>
 </html>
+
