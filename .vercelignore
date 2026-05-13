@@ -1,0 +1,14 @@
+node_modules
+.env
+catalog.docx
+supabase_sync.js
+inspect_docx.js
+setup_supabase.sql
+.git
+.vercel
+README.md
+PULL_REQUEST_TEMPLATE.md
+docs/
+temp/
+test/
+*.log

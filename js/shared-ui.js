@@ -396,10 +396,10 @@ document.addEventListener('DOMContentLoaded', function() {
              <div class="hidden md:flex items-center gap-8 mx-auto whitespace-nowrap">
                 <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 no-underline" href="/">ГЛАВНАЯ</a>
                 <div class="catalog-menu-wrapper relative" id="catalogMenuWrapperGlobal">
-                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 flex items-center gap-1 cursor-pointer no-underline" id="catalogBtnGlobal" href="/catalog">КАТАЛОГ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
+                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 flex items-center gap-1 cursor-pointer no-underline" id="catalogBtnGlobal" href="/_5/code.html">КАТАЛОГ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
                 </div>
                 <div class="about-menu-wrapper relative h-full flex items-center" id="aboutMenuWrapperGlobal">
-                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 no-underline flex items-center gap-1 cursor-pointer" id="aboutBtnGlobal" href="/about">О КОМПАНИИ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
+                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 no-underline flex items-center gap-1 cursor-pointer" id="aboutBtnGlobal" href="/_7/code.html">О КОМПАНИИ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
                 </div>
             </div>
             <div class="flex items-center gap-2 md:gap-6 whitespace-nowrap">
@@ -444,26 +444,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="space-y-4 pt-2">
                     <h3 class="text-[10px] font-label-caps text-on-surface-variant tracking-[0.2em] uppercase opacity-40 mb-4 px-1">О КОМПАНИИ</h3>
                     <div class="flex flex-col gap-5 pl-1">
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/about">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_7/code.html">
                             <span class="material-symbols-outlined text-primary text-lg">info</span>
                             История и цели
                         </a>
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/logistics">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_4/code.html">
                             <span class="material-symbols-outlined text-primary text-lg">local_shipping</span>
                             Автопарк
                         </a>
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/certificates/">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_2/code.html">
                             <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
                             Сертификаты
                         </a>
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/contacts">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_8/code.html">
                             <span class="material-symbols-outlined text-primary text-lg">mail</span>
                             Контакты
                         </a>
                     </div>
                 </div>
 
-                <a class="text-lg font-display-xl uppercase hover:text-primary transition-all tracking-tight border-t border-white/5 pt-4 no-underline text-on-surface flex items-center gap-3" href="/news">
+                <a class="text-lg font-display-xl uppercase hover:text-primary transition-all tracking-tight border-t border-white/5 pt-4 no-underline text-on-surface flex items-center gap-3" href="/news.html">
                     <span class="material-symbols-outlined text-primary text-xl">newspaper</span>
                     НОВОСТИ
                 </a>
@@ -496,54 +496,54 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <!-- L1: Black Metal -->
                         <div class="space-y-3">
-                            <a href="/catalog?pcat=Черный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/_5/code.html?pcat=Черный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">construction</span>
                                 Черный металлопрокат
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А1" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А1</a>
-                                <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А3" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А3</a>
-                                <a href="/catalog?pcat=Черный металлопрокат&cat=Балка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Балка (двутавр)</a>
-                                <a href="/catalog?pcat=Черный металлопрокат&cat=Уголок" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Уголок стальной</a>
-                                <a href="/catalog?pcat=Черный металлопрокат&cat=Швеллер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Швеллер</a>
-                                <a href="/catalog?pcat=Черный металлопрокат&cat=Сетка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Сетка стальная</a>
+                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А1" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А1</a>
+                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А3" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А3</a>
+                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Балка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Балка (двутавр)</a>
+                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Уголок" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Уголок стальной</a>
+                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Швеллер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Швеллер</a>
+                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Сетка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Сетка стальная</a>
                             </div>
                         </div>
 
                         <!-- L1: Sheets -->
                         <div class="space-y-3">
-                            <a href="/catalog?pcat=Листовой металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/_5/code.html?pcat=Листовой металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">layers</span>
                                 Листовой металлопрокат
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/catalog?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Лист холоднокатаный</a>
+                                <a href="/_5/code.html?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Лист холоднокатаный</a>
                             </div>
                         </div>
 
                         <!-- L1: Pipes -->
                         <div class="space-y-3">
-                            <a href="/catalog?pcat=Трубный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/_5/code.html?pcat=Трубный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">radio_button_unchecked</span>
                                 Трубный металлопрокат
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба профильная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба профильная</a>
-                                <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба ВГП" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба ВГП</a>
-                                <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба электросварная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба электросварная</a>
+                                <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба профильная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба профильная</a>
+                                <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба ВГП" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба ВГП</a>
+                                <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба электросварная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба электросварная</a>
                             </div>
                         </div>
 
                         <!-- L1: Roofing -->
                         <div class="space-y-3">
-                            <a href="/catalog?pcat=Кровля и фасад" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/_5/code.html?pcat=Кровля и фасад" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">roofing</span>
                                 Кровля и фасад
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил окрашенный</a>
-                                <a href="/catalog?pcat=Кровля и фасад&cat=Полиэстер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Полиэстер</a>
-                                <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил оцинкованный</a>
+                                <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил окрашенный</a>
+                                <a href="/_5/code.html?pcat=Кровля и фасад&cat=Полиэстер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Полиэстер</a>
+                                <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил оцинкованный</a>
                             </div>
                         </div>
                     </div>
@@ -552,11 +552,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="space-y-6 pt-4 border-t border-white/5">
                         <h3 class="text-[10px] font-label-caps text-on-surface-variant tracking-[0.2em] uppercase opacity-40 mb-2 px-1">ДОПОЛНИТЕЛЬНО</h3>
                         <div class="flex flex-col gap-5 pl-1">
-                            <a href="/calculator" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
+                            <a href="/_1/code.html" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg">calculate</span>
                                 Калькулятор веса
                             </a>
-                            <a href="/services" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
+                            <a href="/_6/code.html" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg">content_cut</span>
                                 Услуги резки
                             </a>
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-widest">ИТОГО</span>
                     <span id="cartTotalGlobal" class="font-display-xl text-3xl text-primary">0 ₽</span>
                 </div>
-                <a href="/cart" class="block w-full py-5 bg-primary text-on-primary text-center font-label-caps text-label-caps tracking-widest hover:bg-primary/90 transition-all uppercase no-underline">ОФОРМИТЬ ЗАКАЗ</a>
+                <a href="/cart.html" class="block w-full py-5 bg-primary text-on-primary text-center font-label-caps text-label-caps tracking-widest hover:bg-primary/90 transition-all uppercase no-underline">ОФОРМИТЬ ЗАКАЗ</a>
             </footer>
         </div>
     </div>
@@ -612,41 +612,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="mega-menu" id="megaMenuGlobal">
       <div class="mega-menu-inner">
         <div class="mega-menu-left">
-          <div class="mega-cat-item" data-submenu="cherny"><a href="/catalog?pcat=Черный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">construction</span>Черный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
-          <div class="mega-cat-item" data-submenu="list"><a href="/catalog?pcat=Листовой металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">layers</span>Листовой металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
-          <div class="mega-cat-item" data-submenu="truby"><a href="/catalog?pcat=Трубный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">radio_button_unchecked</span>Трубный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
-          <div class="mega-cat-item" data-submenu="krovlya"><a href="/catalog?pcat=Кровля и фасад" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">roofing</span>Кровля и фасад<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="cherny"><a href="/_5/code.html?pcat=Черный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">construction</span>Черный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="list"><a href="/_5/code.html?pcat=Листовой металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">layers</span>Листовой металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="truby"><a href="/_5/code.html?pcat=Трубный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">radio_button_unchecked</span>Трубный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="krovlya"><a href="/_5/code.html?pcat=Кровля и фасад" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">roofing</span>Кровля и фасад<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
           <div class="mega-cat-divider"></div>
-          <div class="mega-cat-item" data-submenu="none"><a href="/calculator" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">calculate</span>Калькулятор</a></div>
-          <div class="mega-cat-item" data-submenu="none"><a href="/services" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">content_cut</span>Услуги резки</a></div>
+          <div class="mega-cat-item" data-submenu="none"><a href="/_1/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">calculate</span>Калькулятор</a></div>
+          <div class="mega-cat-item" data-submenu="none"><a href="/_6/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">content_cut</span>Услуги резки</a></div>
         </div>
         <div class="mega-menu-right" id="megaMenuRightGlobal">
           <div class="mega-submenu" data-parent="cherny"><div class="mega-submenu-title">Черный металлопрокат</div><div class="mega-submenu-grid">
-            <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А1" class="mega-sub-link">Арматура А1</a>
-            <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А3" class="mega-sub-link">Арматура А3</a>
-            <a href="/catalog?pcat=Черный металлопрокат&cat=Балка" class="mega-sub-link">Балка (двутавр)</a>
-            <a href="/catalog?pcat=Черный металлопрокат&cat=Уголок" class="mega-sub-link">Уголок стальной</a>
-            <a href="/catalog?pcat=Черный металлопрокат&cat=Швеллер" class="mega-sub-link">Швеллер стальной</a>
-            <a href="/catalog?pcat=Черный металлопрокат&cat=Сетка" class="mega-sub-link">Сетка стальная</a>
+            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А1" class="mega-sub-link">Арматура А1</a>
+            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А3" class="mega-sub-link">Арматура А3</a>
+            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Балка" class="mega-sub-link">Балка (двутавр)</a>
+            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Уголок" class="mega-sub-link">Уголок стальной</a>
+            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Швеллер" class="mega-sub-link">Швеллер стальной</a>
+            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Сетка" class="mega-sub-link">Сетка стальная</a>
           </div></div>
           <div class="mega-submenu" data-parent="list"><div class="mega-submenu-title">Листовой металлопрокат</div><div class="mega-submenu-grid">
-            <a href="/catalog?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="mega-sub-link">Лист холоднокатаный</a>
+            <a href="/_5/code.html?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="mega-sub-link">Лист холоднокатаный</a>
           </div></div>
           <div class="mega-submenu" data-parent="truby"><div class="mega-submenu-title">Трубный металлопрокат</div><div class="mega-submenu-grid">
-            <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба профильная" class="mega-sub-link">Труба профильная</a>
-            <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба ВГП" class="mega-sub-link">Труба ВГП</a>
-            <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба электросварная" class="mega-sub-link">Труба электросварная</a>
+            <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба профильная" class="mega-sub-link">Труба профильная</a>
+            <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба ВГП" class="mega-sub-link">Труба ВГП</a>
+            <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба электросварная" class="mega-sub-link">Труба электросварная</a>
           </div></div>
           <div class="mega-submenu" data-parent="krovlya"><div class="mega-submenu-title">Кровля и фасад</div><div class="mega-submenu-grid">
-            <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="mega-sub-link">Профнастил окрашенный</a>
-            <a href="/catalog?pcat=Кровля и фасад&cat=Полиэстер" class="mega-sub-link">Полиэстер</a>
-            <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="mega-sub-link">Профнастил оцинкованный</a>
+            <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="mega-sub-link">Профнастил окрашенный</a>
+            <a href="/_5/code.html?pcat=Кровля и фасад&cat=Полиэстер" class="mega-sub-link">Полиэстер</a>
+            <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="mega-sub-link">Профнастил оцинкованный</a>
           </div></div>
           <div class="mega-submenu mega-submenu-default is-active" data-parent="default"><div class="mega-default-content">
             <span class="material-symbols-outlined mega-default-icon">inventory_2</span>
             <div class="mega-default-title">Каталог продукции</div>
             <div class="mega-default-desc">Наведите на категорию, чтобы увидеть подкатегории</div>
-            <a href="/catalog" class="mega-default-btn"><span>ВЕСЬ КАТАЛОГ</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+            <a href="/_5/code.html" class="mega-default-btn"><span>ВЕСЬ КАТАЛОГ</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
           </div></div>
         </div>
       </div>
@@ -655,11 +655,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="mega-menu about-compact-menu" id="aboutMenuGlobal">
       <div class="mega-menu-inner">
         <div class="mega-menu-left">
-          <div class="mega-cat-item"><a href="/about" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">info</span>История и цели</a></div>
-          <div class="mega-cat-item"><a href="/logistics" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">local_shipping</span>Автопарк</a></div>
-          <div class="mega-cat-item"><a href="/certificates/" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">workspace_premium</span>Сертификаты</a></div>
+          <div class="mega-cat-item"><a href="/_7/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">info</span>История и цели</a></div>
+          <div class="mega-cat-item"><a href="/_4/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">local_shipping</span>Автопарк</a></div>
+          <div class="mega-cat-item"><a href="/_2/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">workspace_premium</span>Сертификаты</a></div>
           <div class="mega-cat-divider"></div>
-          <div class="mega-cat-item"><a href="/contacts" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">mail</span>Контакты</a></div>
+          <div class="mega-cat-item"><a href="/_8/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">mail</span>Контакты</a></div>
         </div>
       </div>
     </div>
@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-on-surface-variant text-sm font-label-caps">ВАШ ПЕРСОНАЛЬНЫЙ КАБИНЕТ</p>
                     </header>
                     <div class="space-y-4">
-                        <a href="/cabinet" class="flex items-center justify-between p-4 bg-surface-container border border-outline-variant/20 hover:border-primary/40 transition-all no-underline group">
+                        <a href="/cabinet.html" class="flex items-center justify-between p-4 bg-surface-container border border-outline-variant/20 hover:border-primary/40 transition-all no-underline group">
                             <span class="font-label-caps text-label-caps text-on-surface">ПРОФИЛЬ И ЗАКАЗЫ</span>
                             <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </a>
@@ -742,7 +742,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-gutter mb-20">
                 <!-- Branding Column -->
                 <div class="md:col-span-4 space-y-8">
-                <a class="flex items-center gap-4 hover:opacity-80 transition-opacity no-underline" href="/">
+                    <a class="flex items-center gap-4 hover:opacity-80 transition-opacity no-underline" href="/">
                         <img src="/images/logo_icon.png" alt="Железный Дровосек" class="w-16 h-16 object-cover rounded-full border-2 border-primary/30 shadow-[0_0_20px_rgba(255,176,204,0.3)]">
                         <div class="flex flex-col items-start leading-none">
                             <span class="font-display-xl text-[22px] md:text-[26px] leading-tight tracking-tight text-on-surface font-semibold uppercase">ЖЕЛЕЗНЫЙ</span>
@@ -763,10 +763,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h5 class="font-label-caps text-[12px] text-on-surface tracking-[0.2em] uppercase border-b border-outline-variant/20 pb-4">НАВИГАЦИЯ</h5>
                     <ul class="space-y-4">
                         <li><a href="/" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">ГЛАВНАЯ</a></li>
-                        <li><a href="/catalog" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАТАЛОГ</a></li>
-                        <li><a href="/about" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">О КОМПАНИИ</a></li>
-                        <li><a href="/news" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">НОВОСТИ</a></li>
-                        <li><a href="/contacts" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КОНТАКТЫ</a></li>
+                        <li><a href="/_5/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАТАЛОГ</a></li>
+                        <li><a href="/_7/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">О КОМПАНИИ</a></li>
+                        <li><a href="/news.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">НОВОСТИ</a></li>
+                        <li><a href="/_8/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КОНТАКТЫ</a></li>
                     </ul>
                 </div>
 
@@ -774,10 +774,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="md:col-span-2 space-y-8">
                     <h5 class="font-label-caps text-[12px] text-on-surface tracking-[0.2em] uppercase border-b border-outline-variant/20 pb-4">СЕРВИСЫ</h5>
                     <ul class="space-y-4">
-                        <li><a href="/calculator" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАЛЬКУЛЯТОР</a></li>
-                        <li><a href="/services" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">УСЛУГИ РЕЗКИ</a></li>
-                        <li><a href="/certificates/" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">СЕРТИФИКАТЫ</a></li>
-                        <li><a href="/logistics" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">ЛОГИСТИКА</a></li>
+                        <li><a href="/_1/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАЛЬКУЛЯТОР</a></li>
+                        <li><a href="/_6/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">УСЛУГИ РЕЗКИ</a></li>
+                        <li><a href="/_2/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">СЕРТИФИКАТЫ</a></li>
+                        <li><a href="/_4/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">ЛОГИСТИКА</a></li>
                     </ul>
                 </div>
 
@@ -1149,7 +1149,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="overflow-y-auto custom-scrollbar space-y-2 pr-2 mb-4 max-h-[45vh] md:max-h-[350px]">
                                     ${productsHtml}
                                 </div>
-                                <a href="/catalog?search=${encodeURIComponent(query)}" class="block w-full py-4 bg-primary/10 border border-primary/20 text-primary text-center font-label-caps text-label-caps tracking-widest hover:bg-primary hover:text-on-primary transition-all uppercase no-underline rounded-xl flex-shrink-0">
+                                <a href="/_5/code.html?search=${encodeURIComponent(query)}" class="block w-full py-4 bg-primary/10 border border-primary/20 text-primary text-center font-label-caps text-label-caps tracking-widest hover:bg-primary hover:text-on-primary transition-all uppercase no-underline rounded-xl flex-shrink-0">
                                     ПОКАЗАТЬ ВСЕ ТОВАРЫ
                                 </a>
                             </div>
@@ -1166,7 +1166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 const q = e.target.value.trim();
-                if (q) window.location.href = `/catalog?search=${encodeURIComponent(q)}`;
+                if (q) window.location.href = `/_5/code.html?search=${encodeURIComponent(q)}`;
             }
         });
     }
@@ -1355,7 +1355,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.updateGlobalCartBadge = updateGlobalCartBadge;
     window.addEventListener('storage', updateGlobalCartBadge);
 
-    if (window.location.pathname.includes('cabinet')) { checkAuthStatus(); }
+    if (window.location.pathname.includes('cabinet.html')) { checkAuthStatus(); }
 
     // --- GLOBAL SCROLL & SNAPPING ENGINE ---
     let isScrollingGlobal = false;
@@ -1403,20 +1403,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const p = window.location.pathname.toLowerCase();
         
         // Disable on Catalog, News, Product, and Contacts pages to match Stitch_2 behavior
-        const isExcluded = p.includes('catalog') || p.includes('news') ||
+        const isExcluded = p.includes('_5') || p.includes('news') ||
                           p.includes('cart') || p.includes('cabinet') ||
-                          p.includes('calculator') || p.includes('product') ||
-                          p.includes('404');
+                          p.includes('_1') || p.includes('product');
 
-        // On mobile, generally disable snapping EXCEPT for services, contacts and homepage where we want specific behavior
-        if (window.innerWidth <= 768 && !p.includes('services') && !p.includes('contacts') && !p.includes('index') && p !== '/') {
+        // On mobile, generally disable snapping EXCEPT for _6, _8 and hi_tech_style where we want specific behavior
+        if (window.innerWidth <= 768 && !p.includes('_6') && !p.includes('_8') && !p.includes('hi_tech_style')) {
             if (isExcluded) return;
             return;
         }
         if (isExcluded && window.innerWidth > 768) return;
 
-        // Special logic for Homepage: snap Hero -> PowerDetails, then free scroll
-        if (p === '/' || p.includes('index') || p.includes('main')) {
+        // Special logic for Homepage (hi_tech_style): snap Hero -> PowerDetails, then free scroll
+        if (p.includes('hi_tech_style')) {
             const powerDetails = document.getElementById('power-details');
             if (powerDetails && window.innerWidth <= 768) {
                 if ((e.deltaY > 0 && window.scrollY > 50) || 
@@ -1426,11 +1425,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Special logic for Contacts page, Fleet, Certificates, and History: normal scroll after first content section
-        if (p.includes('contacts') || p.includes('logistics') || p.includes('certificates') || p.includes('about')) {
-            const detailsId = p.includes('contacts') ? 'contact-details' : 
-                            (p.includes('logistics') ? 'fleet-details' : 
-                            (p.includes('certificates') ? 'cert-gallery' : 'aesthetics'));
+        // Special logic for Contacts page (_8), Fleet (_4), Certificates (_2), and History (_7): normal scroll after first content section
+        if (p.includes('_8') || p.includes('_4') || p.includes('_2') || p.includes('_7')) {
+            const detailsId = p.includes('_8') ? 'contact-details' : 
+                            (p.includes('_4') ? 'fleet-details' : 
+                            (p.includes('_2') ? 'cert-gallery' : 'aesthetics'));
             const details = document.getElementById(detailsId);
             if (details) {
                 if ((e.deltaY > 0 && window.scrollY > 50) || 
@@ -1442,8 +1441,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-        // Special logic for Cutting page (services):
-        if (p.includes('services')) {
+        // Special logic for Cutting page (_6):
+        if (p.includes('_6')) {
             const stats = document.getElementById('precision-stats');
             if (stats) {
                 // On Mobile: snap only between Hero and Stats
@@ -1981,5 +1980,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     observer.observe(document.body, { childList: true, subtree: true });
 });
-
-

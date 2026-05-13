@@ -152,7 +152,7 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.mail.ru', port: 465, secure: true,
   auth: { user: 'egapega322@mail.ru', pass: process.env.SMTP_PASS }
 });
-const ADMIN_EMAILS = ['info@steelwoodman.ru', 'egapega1337@gmail.com'];
+const ADMIN_EMAILS = ['info@steelwoodman.ru', 'egapega1337@gmail.com', 'egapega322@mail.ru'];
 
 // API: Orders
 app.post('/api/orders', async (req, res) => {
@@ -177,6 +177,61 @@ app.post('/api/orders', async (req, res) => {
 
   res.json({ id: order.id, message: 'Order created' });
 });
+
+// API: Leads
+app.post('/api/leads', async (req, res) => {
+  const { name, phone, email, message, type } = req.body;
+  
+  // Save to leads table
+  const { data, error } = await supabase
+    .from('leads')
+    .insert([{ name, phone, email, message, type }])
+    .select();
+  
+  if (error) return res.status(500).json({ error: error.message });
+
+  // If it's a subscription, also add to subscribers table for mailing list
+  if (type === 'subscription' && email) {
+    await supabase.from('subscribers').insert([{ email }]).catch(e => console.error('Sub error:', e));
+  }
+
+  transporter.sendMail({
+    from: 'egapega322@mail.ru', to: ADMIN_EMAILS.join(', '),
+    subject: `Новая заявка: ${type || 'Контакт'}`,
+    html: `
+      <h2>Новая заявка с сайта</h2>
+      <p><b>Тип:</b> ${type || 'Общая'}</p>
+      <p><b>Имя:</b> ${name || 'Не указано'}</p>
+      <p><b>Телефон:</b> ${phone || 'Не указано'}</p>
+      <p><b>Email:</b> ${email || 'Не указано'}</p>
+      <p><b>Сообщение:</b> ${message || '-'}</p>
+    `
+  }).catch(e => console.error(e));
+
+  res.json({ success: true, message: 'Lead created' });
+});
+
+
+// API: Subscribers
+app.post('/api/subscribers', async (req, res) => {
+  const { email } = req.body;
+  const { data, error } = await supabase
+    .from('subscribers')
+    .insert([{ email }])
+    .select();
+  
+  // Ignore duplicate email errors (23505)
+  if (error && error.code !== '23505') return res.status(500).json({ error: error.message });
+
+  transporter.sendMail({
+    from: 'egapega322@mail.ru', to: ADMIN_EMAILS.join(', '),
+    subject: `Новая подписка на рассылку`,
+    html: `<p>Новый подписчик: <b>${email}</b></p>`
+  }).catch(e => console.error(e));
+
+  res.json({ success: true, message: 'Subscribed' });
+});
+
 
 // Serve static files (Correct for Vercel)
 app.use(express.static(path.join(process.cwd(), '.'), { extensions: ['html'] }));
