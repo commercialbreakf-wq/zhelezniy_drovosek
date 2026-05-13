@@ -152,7 +152,7 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.mail.ru', port: 465, secure: true,
   auth: { user: 'egapega322@mail.ru', pass: process.env.SMTP_PASS }
 });
-const ADMIN_EMAILS = ['info@steelwoodman.ru', 'egapega1337@gmail.com', 'egapega322@mail.ru'];
+const ADMIN_EMAILS = process.env.ADMIN_EMAILS ? process.env.ADMIN_EMAILS.split(',').map(e => e.trim()) : ['info@steelwoodman.ru', 'egapega1337@gmail.com', 'egapega322@mail.ru'];
 
 // API: Orders
 app.post('/api/orders', async (req, res) => {
