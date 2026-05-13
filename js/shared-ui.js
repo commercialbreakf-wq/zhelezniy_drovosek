@@ -82,7 +82,7 @@
             0%, 100% { opacity: 0.3; }
             50% { opacity: 0.8; }
         }
-        body.preloader-active { overflow: hidden !important; height: 100vh !important; }
+        body.preloader-active { overflow: hidden; height: 100vh; position: fixed; width: 100%; }
     `;
 
     const inject = () => {
@@ -131,21 +131,33 @@
 
     inject();
 
-    window.addEventListener('load', () => {
-        const bar = document.getElementById('globalPreloaderBar');
-        if (bar) bar.style.width = '100%';
+    const removePreloader = () => {
+        const loader = document.getElementById('globalPreloader');
+        if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.remove();
+                document.body.classList.remove('preloader-active');
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.height = '';
+            }, 800);
+        } else {
+            document.body.classList.remove('preloader-active');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.height = '';
+        }
+    };
 
-        setTimeout(() => {
-            const loader = document.getElementById('globalPreloader');
-            if (loader) {
-                loader.classList.add('fade-out');
-                setTimeout(() => {
-                    loader.remove();
-                    document.body.classList.remove('preloader-active');
-                }, 800);
-            }
-        }, 300);
-    });
+    if (document.readyState === 'complete') {
+        removePreloader();
+    } else {
+        window.addEventListener('load', removePreloader);
+        setTimeout(removePreloader, 3000); // Safety timeout
+    }
 })();
 
 // Global Navigation Toggles
@@ -172,6 +184,7 @@ window.toggleMobileMenuGlobal = function() {
         panel.classList.add('translate-x-0');
         overlay.classList.remove('opacity-0');
         overlay.style.pointerEvents = 'auto';
+        document.body.classList.remove('preloader-active');
         document.body.style.overflow = 'hidden'; // Lock scroll
     }
 };
@@ -200,6 +213,7 @@ window.toggleMobileCatalogGlobal = function() {
         panel.classList.add('translate-x-0');
         overlay.classList.remove('opacity-0');
         overlay.style.pointerEvents = 'auto';
+        document.body.classList.remove('preloader-active');
         document.body.style.overflow = 'hidden'; // Lock scroll
     }
 };
@@ -236,6 +250,7 @@ window.toggleMobileCatalogGlobal = function() {
             container.classList.remove('opacity-0');
             container.classList.remove('pointer-events-none');
             container.classList.add('pointer-events-auto');
+            document.body.classList.remove('preloader-active');
             document.body.style.overflow = 'hidden'; // Disable scroll
             if(input) setTimeout(() => input.focus(), 300);
         }
@@ -264,6 +279,7 @@ window.toggleCartDrawerGlobal = function() {
         panel.classList.add('translate-x-0');
         overlay.classList.remove('opacity-0');
         overlay.style.pointerEvents = 'auto';
+        document.body.classList.remove('preloader-active');
         document.body.style.overflow = 'hidden'; // Lock scroll
         if (window.renderCartDrawerItems) window.renderCartDrawerItems();
     }
@@ -292,6 +308,7 @@ window.toggleAuthModalGlobal = function() {
         panel.classList.add('translate-x-0');
         overlay.classList.remove('opacity-0');
         overlay.style.pointerEvents = 'auto';
+        document.body.classList.remove('preloader-active');
         document.body.style.overflow = 'hidden'; // Lock scroll
         if (window.checkAuthStatus) window.checkAuthStatus();
     }
@@ -374,9 +391,15 @@ window.checkAuthStatus = async function() {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+    // --- GLOBAL HEADER & FOOTER INJECTION ---
+    const injectUI = () => {
+        if (document.querySelector('nav#globalHeader')) return;
+        if (!document.body) {
+            requestAnimationFrame(injectUI);
+            return;
+        }
 
-    const headerHtml = `
+        const headerHtml = `
     <div id="scrollProgressGlobal"></div>
     <nav id="globalHeader" class="fixed top-0 w-full z-[1000] bg-surface/90 backdrop-blur-md border-b border-outline-variant/20">
         <div class="flex justify-between items-center h-20 px-4 md:px-margin-edge w-full max-w-container-max mx-auto">
@@ -396,10 +419,10 @@ document.addEventListener('DOMContentLoaded', function() {
              <div class="hidden md:flex items-center gap-8 mx-auto whitespace-nowrap">
                 <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 no-underline" href="/">ГЛАВНАЯ</a>
                 <div class="catalog-menu-wrapper relative" id="catalogMenuWrapperGlobal">
-                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 flex items-center gap-1 cursor-pointer no-underline" id="catalogBtnGlobal" href="/_5/code.html">КАТАЛОГ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
+                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 flex items-center gap-1 cursor-pointer no-underline" id="catalogBtnGlobal" href="/catalog">КАТАЛОГ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
                 </div>
                 <div class="about-menu-wrapper relative h-full flex items-center" id="aboutMenuWrapperGlobal">
-                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 no-underline flex items-center gap-1 cursor-pointer" id="aboutBtnGlobal" href="/_7/code.html">О КОМПАНИИ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
+                    <a class="nav-link font-label-caps text-[13px] text-on-surface-variant hover:text-primary transition-all duration-300 no-underline flex items-center gap-1 cursor-pointer" id="aboutBtnGlobal" href="/about">О КОМПАНИИ <span class="material-symbols-outlined text-[18px]">expand_more</span></a>
                 </div>
             </div>
             <div class="flex items-center gap-2 md:gap-6 whitespace-nowrap">
@@ -444,19 +467,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="space-y-4 pt-2">
                     <h3 class="text-[10px] font-label-caps text-on-surface-variant tracking-[0.2em] uppercase opacity-40 mb-4 px-1">О КОМПАНИИ</h3>
                     <div class="flex flex-col gap-5 pl-1">
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_7/code.html">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/about">
                             <span class="material-symbols-outlined text-primary text-lg">info</span>
                             История и цели
                         </a>
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_4/code.html">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/logistics">
                             <span class="material-symbols-outlined text-primary text-lg">local_shipping</span>
                             Автопарк
                         </a>
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_2/code.html">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/certificates">
                             <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
                             Сертификаты
                         </a>
-                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/_8/code.html">
+                        <a class="text-md font-display-xl uppercase hover:text-primary transition-all no-underline text-on-surface flex items-center gap-3" href="/contacts">
                             <span class="material-symbols-outlined text-primary text-lg">mail</span>
                             Контакты
                         </a>
@@ -496,54 +519,54 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <!-- L1: Black Metal -->
                         <div class="space-y-3">
-                            <a href="/_5/code.html?pcat=Черный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/catalog?pcat=Черный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">construction</span>
                                 Черный металлопрокат
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А1" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А1</a>
-                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А3" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А3</a>
-                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Балка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Балка (двутавр)</a>
-                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Уголок" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Уголок стальной</a>
-                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Швеллер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Швеллер</a>
-                                <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Сетка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Сетка стальная</a>
+                                <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А1" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А1</a>
+                                <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А3" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Арматура А3</a>
+                                <a href="/catalog?pcat=Черный металлопрокат&cat=Балка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Балка (двутавр)</a>
+                                <a href="/catalog?pcat=Черный металлопрокат&cat=Уголок" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Уголок стальной</a>
+                                <a href="/catalog?pcat=Черный металлопрокат&cat=Швеллер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Швеллер</a>
+                                <a href="/catalog?pcat=Черный металлопрокат&cat=Сетка" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Сетка стальная</a>
                             </div>
                         </div>
 
                         <!-- L1: Sheets -->
                         <div class="space-y-3">
-                            <a href="/_5/code.html?pcat=Листовой металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/catalog?pcat=Листовой металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">layers</span>
                                 Листовой металлопрокат
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/_5/code.html?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Лист холоднокатаный</a>
+                                <a href="/catalog?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Лист холоднокатаный</a>
                             </div>
                         </div>
 
                         <!-- L1: Pipes -->
                         <div class="space-y-3">
-                            <a href="/_5/code.html?pcat=Трубный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/catalog?pcat=Трубный металлопрокат" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">radio_button_unchecked</span>
                                 Трубный металлопрокат
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба профильная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба профильная</a>
-                                <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба ВГП" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба ВГП</a>
-                                <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба электросварная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба электросварная</a>
+                                <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба профильная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба профильная</a>
+                                <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба ВГП" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба ВГП</a>
+                                <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба электросварная" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Труба электросварная</a>
                             </div>
                         </div>
 
                         <!-- L1: Roofing -->
                         <div class="space-y-3">
-                            <a href="/_5/code.html?pcat=Кровля и фасад" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
+                            <a href="/catalog?pcat=Кровля и фасад" class="text-sm font-bold uppercase text-on-surface hover:text-primary no-underline flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[18px] opacity-50">roofing</span>
                                 Кровля и фасад
                             </a>
                             <div class="pl-7 flex flex-col gap-2.5 border-l border-white/5 ml-2">
-                                <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил окрашенный</a>
-                                <a href="/_5/code.html?pcat=Кровля и фасад&cat=Полиэстер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Полиэстер</a>
-                                <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил оцинкованный</a>
+                                <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил окрашенный</a>
+                                <a href="/catalog?pcat=Кровля и фасад&cat=Полиэстер" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Полиэстер</a>
+                                <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="text-xs text-on-surface-variant hover:text-primary no-underline uppercase tracking-wider">Профнастил оцинкованный</a>
                             </div>
                         </div>
                     </div>
@@ -552,11 +575,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="space-y-6 pt-4 border-t border-white/5">
                         <h3 class="text-[10px] font-label-caps text-on-surface-variant tracking-[0.2em] uppercase opacity-40 mb-2 px-1">ДОПОЛНИТЕЛЬНО</h3>
                         <div class="flex flex-col gap-5 pl-1">
-                            <a href="/_1/code.html" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
+                            <a href="/calculator" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg">calculate</span>
                                 Калькулятор веса
                             </a>
-                            <a href="/_6/code.html" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
+                            <a href="/services" class="text-md font-display-xl uppercase hover:text-primary no-underline text-on-surface flex items-center gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg">content_cut</span>
                                 Услуги резки
                             </a>
@@ -612,41 +635,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="mega-menu" id="megaMenuGlobal">
       <div class="mega-menu-inner">
         <div class="mega-menu-left">
-          <div class="mega-cat-item" data-submenu="cherny"><a href="/_5/code.html?pcat=Черный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">construction</span>Черный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
-          <div class="mega-cat-item" data-submenu="list"><a href="/_5/code.html?pcat=Листовой металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">layers</span>Листовой металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
-          <div class="mega-cat-item" data-submenu="truby"><a href="/_5/code.html?pcat=Трубный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">radio_button_unchecked</span>Трубный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
-          <div class="mega-cat-item" data-submenu="krovlya"><a href="/_5/code.html?pcat=Кровля и фасад" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">roofing</span>Кровля и фасад<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="cherny"><a href="/catalog?pcat=Черный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">construction</span>Черный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="list"><a href="/catalog?pcat=Листовой металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">layers</span>Листовой металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="truby"><a href="/catalog?pcat=Трубный металлопрокат" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">radio_button_unchecked</span>Трубный металлопрокат<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
+          <div class="mega-cat-item" data-submenu="krovlya"><a href="/catalog?pcat=Кровля и фасад" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">roofing</span>Кровля и фасад<span class="material-symbols-outlined mega-arrow">chevron_right</span></a></div>
           <div class="mega-cat-divider"></div>
-          <div class="mega-cat-item" data-submenu="none"><a href="/_1/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">calculate</span>Калькулятор</a></div>
-          <div class="mega-cat-item" data-submenu="none"><a href="/_6/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">content_cut</span>Услуги резки</a></div>
+          <div class="mega-cat-item" data-submenu="none"><a href="/calculator" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">calculate</span>Калькулятор</a></div>
+          <div class="mega-cat-item" data-submenu="none"><a href="/services" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">content_cut</span>Услуги резки</a></div>
         </div>
         <div class="mega-menu-right" id="megaMenuRightGlobal">
           <div class="mega-submenu" data-parent="cherny"><div class="mega-submenu-title">Черный металлопрокат</div><div class="mega-submenu-grid">
-            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А1" class="mega-sub-link">Арматура А1</a>
-            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Арматура А3" class="mega-sub-link">Арматура А3</a>
-            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Балка" class="mega-sub-link">Балка (двутавр)</a>
-            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Уголок" class="mega-sub-link">Уголок стальной</a>
-            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Швеллер" class="mega-sub-link">Швеллер стальной</a>
-            <a href="/_5/code.html?pcat=Черный металлопрокат&cat=Сетка" class="mega-sub-link">Сетка стальная</a>
+            <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А1" class="mega-sub-link">Арматура А1</a>
+            <a href="/catalog?pcat=Черный металлопрокат&cat=Арматура А3" class="mega-sub-link">Арматура А3</a>
+            <a href="/catalog?pcat=Черный металлопрокат&cat=Балка" class="mega-sub-link">Балка (двутав)</a>
+            <a href="/catalog?pcat=Черный металлопрокат&cat=Уголок" class="mega-sub-link">Уголок стальной</a>
+            <a href="/catalog?pcat=Черный металлопрокат&cat=Швеллер" class="mega-sub-link">Швеллер стальной</a>
+            <a href="/catalog?pcat=Черный металлопрокат&cat=Сетка" class="mega-sub-link">Сетка стальная</a>
           </div></div>
           <div class="mega-submenu" data-parent="list"><div class="mega-submenu-title">Листовой металлопрокат</div><div class="mega-submenu-grid">
-            <a href="/_5/code.html?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="mega-sub-link">Лист холоднокатаный</a>
+            <a href="/catalog?pcat=Листовой металлопрокат&cat=Лист холоднокатаный" class="mega-sub-link">Лист холоднокатаный</a>
           </div></div>
           <div class="mega-submenu" data-parent="truby"><div class="mega-submenu-title">Трубный металлопрокат</div><div class="mega-submenu-grid">
-            <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба профильная" class="mega-sub-link">Труба профильная</a>
-            <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба ВГП" class="mega-sub-link">Труба ВГП</a>
-            <a href="/_5/code.html?pcat=Трубный металлопрокат&cat=Труба электросварная" class="mega-sub-link">Труба электросварная</a>
+            <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба профильная" class="mega-sub-link">Труба профильная</a>
+            <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба ВГП" class="mega-sub-link">Труба ВГП</a>
+            <a href="/catalog?pcat=Трубный металлопрокат&cat=Труба электросварная" class="mega-sub-link">Труба электросварная</a>
           </div></div>
           <div class="mega-submenu" data-parent="krovlya"><div class="mega-submenu-title">Кровля и фасад</div><div class="mega-submenu-grid">
-            <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="mega-sub-link">Профнастил окрашенный</a>
-            <a href="/_5/code.html?pcat=Кровля и фасад&cat=Полиэстер" class="mega-sub-link">Полиэстер</a>
-            <a href="/_5/code.html?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="mega-sub-link">Профнастил оцинкованный</a>
+            <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил окрашенный" class="mega-sub-link">Профнастил окрашенный</a>
+            <a href="/catalog?pcat=Кровля и фасад&cat=Полиэстер" class="mega-sub-link">Полиэстер</a>
+            <a href="/catalog?pcat=Кровля и фасад&cat=Профнастил оцинкованный" class="mega-sub-link">Профнастил оцинкованный</a>
           </div></div>
           <div class="mega-submenu mega-submenu-default is-active" data-parent="default"><div class="mega-default-content">
             <span class="material-symbols-outlined mega-default-icon">inventory_2</span>
             <div class="mega-default-title">Каталог продукции</div>
             <div class="mega-default-desc">Наведите на категорию, чтобы увидеть подкатегории</div>
-            <a href="/_5/code.html" class="mega-default-btn"><span>ВЕСЬ КАТАЛОГ</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+            <a href="/catalog" class="mega-default-btn"><span>ВЕСЬ КАТАЛОГ</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
           </div></div>
         </div>
       </div>
@@ -655,11 +678,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="mega-menu about-compact-menu" id="aboutMenuGlobal">
       <div class="mega-menu-inner">
         <div class="mega-menu-left">
-          <div class="mega-cat-item"><a href="/_7/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">info</span>История и цели</a></div>
-          <div class="mega-cat-item"><a href="/_4/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">local_shipping</span>Автопарк</a></div>
-          <div class="mega-cat-item"><a href="/_2/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">workspace_premium</span>Сертификаты</a></div>
+          <div class="mega-cat-item"><a href="/about" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">info</span>История и цели</a></div>
+          <div class="mega-cat-item"><a href="/logistics" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">local_shipping</span>Автопарк</a></div>
+          <div class="mega-cat-item"><a href="/certificates" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">workspace_premium</span>Сертификаты</a></div>
           <div class="mega-cat-divider"></div>
-          <div class="mega-cat-item"><a href="/_8/code.html" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">mail</span>Контакты</a></div>
+          <div class="mega-cat-item"><a href="/contacts" class="mega-cat-link"><span class="material-symbols-outlined mega-cat-icon">mail</span>Контакты</a></div>
         </div>
       </div>
     </div>
@@ -685,6 +708,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <input type="password" id="loginPassGlobal" class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary transition-colors text-on-surface py-3 px-0 outline-none font-body-md"/>
                             </div>
                         </div>
+                        <div id="loginErrorGlobal" class="hidden text-error text-[11px] font-label-caps uppercase tracking-widest"></div>
                         <button onclick="handleLoginGlobal()" class="w-full py-5 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">ВОЙТИ</button>
                         <div class="text-center">
                             <button onclick="switchAuthGlobal('register')" class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-[12px] uppercase">НЕТ АККАУНТА? ЗАРЕГИСТРИРОВАТЬСЯ</button>
@@ -705,6 +729,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <input type="password" id="regPassGlobal" class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary transition-colors text-on-surface py-3 px-0 outline-none font-body-md"/>
                             </div>
                         </div>
+                        <div id="registerErrorGlobal" class="hidden text-error text-[11px] font-label-caps uppercase tracking-widest"></div>
                         <button onclick="handleRegisterGlobal()" class="w-full py-5 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest hover:bg-primary/90 transition-all">СОЗДАТЬ АККАУНТ</button>
                         <div class="text-center">
                             <button onclick="switchAuthGlobal('login')" class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-[12px] uppercase">УЖЕ ЕСТЬ АККАУНТ? ВОЙТИ</button>
@@ -763,10 +788,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h5 class="font-label-caps text-[12px] text-on-surface tracking-[0.2em] uppercase border-b border-outline-variant/20 pb-4">НАВИГАЦИЯ</h5>
                     <ul class="space-y-4">
                         <li><a href="/" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">ГЛАВНАЯ</a></li>
-                        <li><a href="/_5/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАТАЛОГ</a></li>
-                        <li><a href="/_7/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">О КОМПАНИИ</a></li>
-                        <li><a href="/news.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">НОВОСТИ</a></li>
-                        <li><a href="/_8/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КОНТАКТЫ</a></li>
+                        <li><a href="/catalog" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАТАЛОГ</a></li>
+                        <li><a href="/about" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">О КОМПАНИИ</a></li>
+                        <li><a href="/news" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">НОВОСТИ</a></li>
+                        <li><a href="/contacts" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КОНТАКТЫ</a></li>
                     </ul>
                 </div>
 
@@ -774,10 +799,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="md:col-span-2 space-y-8">
                     <h5 class="font-label-caps text-[12px] text-on-surface tracking-[0.2em] uppercase border-b border-outline-variant/20 pb-4">СЕРВИСЫ</h5>
                     <ul class="space-y-4">
-                        <li><a href="/_1/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАЛЬКУЛЯТОР</a></li>
-                        <li><a href="/_6/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">УСЛУГИ РЕЗКИ</a></li>
-                        <li><a href="/_2/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">СЕРТИФИКАТЫ</a></li>
-                        <li><a href="/_4/code.html" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">ЛОГИСТИКА</a></li>
+                        <li><a href="/calculator" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">КАЛЬКУЛЯТОР</a></li>
+                        <li><a href="/services" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">УСЛУГИ РЕЗКИ</a></li>
+                        <li><a href="/certificates" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">СЕРТИФИКАТЫ</a></li>
+                        <li><a href="/logistics" class="text-sm text-on-surface-variant hover:text-primary transition-colors no-underline uppercase tracking-wider">ЛОГИСТИКА</a></li>
                     </ul>
                 </div>
 
@@ -814,8 +839,11 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
 
     const style = `
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <style>
-        #globalHeader { z-index: 1000; }
+        #globalHeader { z-index: 1000; will-change: transform; }
         .nav-link { position: relative; }
         .nav-link::after {
             content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
@@ -828,6 +856,7 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed; top: 80px; left: 0; width: 100vw; z-index: 2000;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             transform: translateY(-10px);
+            will-change: opacity, transform;
         }
         .mega-menu.is-visible { 
             opacity: 1; pointer-events: auto; visibility: visible;
@@ -944,26 +973,6 @@ document.addEventListener('DOMContentLoaded', function() {
             background: #ffb0cc;
         }
 
-        /* HIDE SCROLLBAR ON MOBILE */
-        @media (max-width: 768px) {
-            ::-webkit-scrollbar {
-                display: none !important;
-                width: 0 !important;
-                height: 0 !important;
-            }
-            * {
-                scrollbar-width: none !important;
-                -ms-overflow-style: none !important;
-            }
-            html, body {
-                overflow-x: hidden !important;
-                width: 100% !important;
-                position: relative !important;
-                scrollbar-width: none !important;
-                -ms-overflow-style: none !important;
-            }
-        }
-
         /* --- SCROLL PROGRESS BAR --- */
         #scrollProgressGlobal {
             position: fixed;
@@ -977,10 +986,18 @@ document.addEventListener('DOMContentLoaded', function() {
             transition: width 0.1s ease-out;
         }
 
-        @media (max-width: 768px) {
             #scrollProgressGlobal {
                 display: none !important;
             }
+        }
+
+        /* Auth Error Animation */
+        .auth-error-animate {
+            animation: authErrorFadeIn 0.3s ease-out forwards;
+        }
+        @keyframes authErrorFadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 
@@ -997,6 +1014,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.head.insertAdjacentHTML('beforeend', style);
+
+    // Clear auth errors on input
+    ['loginEmailGlobal', 'loginPassGlobal'].forEach(id => {
+        document.getElementById(id)?.addEventListener('input', () => {
+            document.getElementById('loginErrorGlobal')?.classList.add('hidden');
+        });
+    });
+    ['regNameGlobal', 'regEmailGlobal', 'regPassGlobal'].forEach(id => {
+        document.getElementById(id)?.addEventListener('input', () => {
+            document.getElementById('registerErrorGlobal')?.classList.add('hidden');
+        });
+    });
 
     // Header Logic
     const catalogWrapper = document.getElementById('catalogMenuWrapperGlobal');
@@ -1206,34 +1235,79 @@ document.addEventListener('DOMContentLoaded', function() {
         if (li) li.classList.add('hidden');
     }
 
-    window.showErrorPopupGlobal = function(message) {
-        let overlay = document.getElementById('globalErrorPopup');
+    window.showNotificationGlobal = function(message, type = 'error') {
+        let overlay = document.getElementById('globalNotification');
         if (overlay) overlay.remove();
         
+        const config = {
+            error: {
+                icon: 'error',
+                title: 'ОШИБКА',
+                color: 'text-error',
+                borderColor: 'border-error/20',
+                btnHover: 'hover:bg-error'
+            },
+            success: {
+                icon: 'check_circle',
+                title: 'УСПЕШНО',
+                color: 'text-primary',
+                borderColor: 'border-primary/20',
+                btnHover: 'hover:bg-primary'
+            },
+            warning: {
+                icon: 'warning',
+                title: 'ВНИМАНИЕ',
+                color: 'text-amber-400',
+                borderColor: 'border-amber-400/20',
+                btnHover: 'hover:bg-amber-400'
+            }
+        };
+
+        const theme = config[type] || config.error;
+        
         overlay = document.createElement('div');
-        overlay.id = 'globalErrorPopup';
+        overlay.id = 'globalNotification';
         overlay.className = 'fixed inset-0 z-[10000] flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-500 p-4 pointer-events-auto';
         overlay.innerHTML = `
-            <div class="glass-panel p-8 max-w-sm w-full text-center space-y-6 border-error/20 relative opacity-0 translate-y-4 transition-all duration-500" id="errorPanelInner">
-                <span class="material-symbols-outlined text-5xl text-error">error</span>
+            <div class="glass-panel p-8 max-w-sm w-full text-center space-y-6 ${theme.borderColor} relative opacity-0 translate-y-4 transition-all duration-500" id="notificationPanelInner">
+                <span class="material-symbols-outlined text-5xl ${theme.color}">${theme.icon}</span>
                 <div class="space-y-2">
-                    <h3 class="font-display-xl text-xl uppercase">ОШИБКА</h3>
-                    <p class="text-on-surface-variant text-sm font-label-caps tracking-widest uppercase">${message}</p>
+                    <h3 class="font-display-xl text-xl uppercase ${theme.color}">${theme.title}</h3>
+                    <p class="text-on-surface-variant text-sm font-label-caps tracking-widest uppercase leading-relaxed">${message}</p>
                 </div>
-                <button onclick="window.closeErrorPopupGlobal()" class="w-full py-3 bg-surface-container border border-outline-variant/30 text-on-surface font-label-caps text-xs tracking-widest hover:bg-error hover:text-white hover:border-error transition-all uppercase">ЗАКРЫТЬ</button>
+                <button onclick="window.closeNotificationGlobal()" class="w-full py-3 bg-surface-container border border-outline-variant/30 text-on-surface font-label-caps text-xs tracking-widest ${theme.btnHover} hover:text-black hover:border-transparent transition-all uppercase">ЗАКРЫТЬ</button>
             </div>
         `;
         document.body.appendChild(overlay);
         
         setTimeout(() => {
             overlay.classList.remove('opacity-0');
-            const inner = document.getElementById('errorPanelInner');
+            const inner = document.getElementById('notificationPanelInner');
             if (inner) {
                 inner.classList.remove('opacity-0', 'translate-y-4');
             }
         }, 10);
 
-        setTimeout(window.closeErrorPopupGlobal, 5000);
+        // Auto close only for success
+        if (type === 'success') {
+            setTimeout(window.closeNotificationGlobal, 3000);
+        }
+    };
+
+    // Alias for backward compatibility if needed, but we'll update calls
+    window.showErrorPopupGlobal = function(msg) { window.showNotificationGlobal(msg, 'error'); };
+    window.showSuccessPopupGlobal = function(msg) { window.showNotificationGlobal(msg, 'success'); };
+
+    window.closeNotificationGlobal = function() {
+        const overlay = document.getElementById('globalNotification');
+        const inner = document.getElementById('notificationPanelInner');
+        if (!overlay) return;
+        
+        overlay.classList.add('opacity-0');
+        if (inner) {
+            inner.classList.add('opacity-0', 'translate-y-4');
+        }
+        setTimeout(() => overlay.remove(), 500);
     };
 
     window.closeErrorPopupGlobal = function() {
@@ -1249,13 +1323,27 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     window.handleLoginGlobal = async function() {
-        const email = document.getElementById('loginEmailGlobal').value;
-        const password = document.getElementById('loginPassGlobal').value;
+        const emailInput = document.getElementById('loginEmailGlobal');
+        const passInput = document.getElementById('loginPassGlobal');
+        const errorEl = document.getElementById('loginErrorGlobal');
+        const email = emailInput.value.trim();
+        const password = passInput.value;
         const btn = document.querySelector('#loginFormGlobal button');
         const originalText = btn.innerHTML;
         
+        if (errorEl) errorEl.classList.add('hidden');
+
+        if (!email || !password) {
+            if (errorEl) {
+                errorEl.textContent = 'Заполните все поля';
+                errorEl.classList.remove('hidden');
+                errorEl.classList.add('auth-error-animate');
+            }
+            return;
+        }
+
         btn.disabled = true;
-        btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
+        btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-sm">progress_activity</span>';
 
         try {
             const res = await fetch('/api/auth/login', {
@@ -1264,15 +1352,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: JSON.stringify({ email, password })
             });
             const data = await res.json();
+            
             if (res.ok) {
                 localStorage.setItem('metal_token', data.token);
                 localStorage.setItem('metal_user', JSON.stringify(data.user));
-                window.location.reload(); // Refresh to update all components
-            } else { 
-                showErrorPopupGlobal(data.error || 'Неверный логин или пароль'); 
+                window.showNotificationGlobal('Успешный вход! Перенаправление...', 'success');
+                setTimeout(() => window.location.href = '/cabinet', 1000);
+            } else {
+                let msg = 'Неверный логин или пароль';
+                if (data.error === 'User not found') msg = 'Пользователь не найден';
+                else if (data.error === 'Invalid credentials') msg = 'Неверный пароль';
+                
+                if (errorEl) {
+                    errorEl.textContent = msg;
+                    errorEl.classList.remove('hidden');
+                    errorEl.classList.add('auth-error-animate');
+                }
+                passInput.value = ''; 
             }
         } catch (e) { 
-            showErrorPopupGlobal('Ошибка сервера'); 
+            if (errorEl) {
+                errorEl.textContent = 'Ошибка подключения';
+                errorEl.classList.remove('hidden');
+                errorEl.classList.add('auth-error-animate');
+            }
         } finally {
             btn.disabled = false;
             btn.innerHTML = originalText;
@@ -1280,9 +1383,27 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     window.handleRegisterGlobal = async function() {
-        const name = document.getElementById('regNameGlobal').value;
-        const email = document.getElementById('regEmailGlobal').value;
+        const name = document.getElementById('regNameGlobal').value.trim();
+        const email = document.getElementById('regEmailGlobal').value.trim();
         const password = document.getElementById('regPassGlobal').value;
+        const errorEl = document.getElementById('registerErrorGlobal');
+        const btn = document.querySelector('#registerFormGlobal button');
+        const originalText = btn.innerHTML;
+
+        if (errorEl) errorEl.classList.add('hidden');
+
+        if (!name || !email || !password) {
+            if (errorEl) {
+                errorEl.textContent = 'Заполните все поля регистрации';
+                errorEl.classList.remove('hidden');
+                errorEl.classList.add('auth-error-animate');
+            }
+            return;
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-sm">progress_activity</span>';
+
         try {
             const res = await fetch('/api/auth/register', {
                 method: 'POST',
@@ -1293,9 +1414,28 @@ document.addEventListener('DOMContentLoaded', function() {
             if (res.ok) {
                 localStorage.setItem('metal_token', data.token);
                 localStorage.setItem('metal_user', JSON.stringify(data.user));
+                window.showNotificationGlobal('Аккаунт успешно создан!', 'success');
+                setTimeout(() => window.location.href = '/cabinet', 1500);
+            } else {
+                let msg = 'Ошибка при регистрации';
+                if (data.error === 'Email already exists') msg = 'Этот Email уже занят';
+                
+                if (errorEl) {
+                    errorEl.textContent = msg;
+                    errorEl.classList.remove('hidden');
+                    errorEl.classList.add('auth-error-animate');
+                }
             }
-            checkAuthStatus();
-        } catch (e) { alert('Ошибка регистрации'); }
+        } catch (e) { 
+            if (errorEl) {
+                errorEl.textContent = 'Ошибка сервера';
+                errorEl.classList.remove('hidden');
+                errorEl.classList.add('auth-error-animate');
+            }
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        }
     };
 
     window.handleLogoutGlobal = function() {
@@ -1357,150 +1497,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (window.location.pathname.includes('cabinet.html')) { checkAuthStatus(); }
 
-    // --- GLOBAL SCROLL & SNAPPING ENGINE ---
-    let isScrollingGlobal = false;
-    let lastScrollTimeGlobal = 0;
-
-    window.customSmoothScrollGlobal = function(targetY, duration) {
-        if (isScrollingGlobal) return;
-        isScrollingGlobal = true;
-        const startY = window.pageYOffset;
-        const diff = targetY - startY;
-        let start = null;
-
-        // Faster duration for more responsive transitions
-        const finalDuration = duration || (window.innerWidth <= 768 ? 200 : 300);
-
-        function step(timestamp) {
-            if (!start) start = timestamp;
-            const time = timestamp - start;
-            const percent = Math.min(time / finalDuration, 1);
-            // Cubic ease-out
-            const ease = 1 - Math.pow(1 - percent, 3);
-            window.scrollTo(0, startY + diff * ease);
-            if (time < finalDuration) {
-                window.requestAnimationFrame(step);
-            } else {
-                setTimeout(() => { isScrollingGlobal = false; }, 50);
-            }
-        }
-        window.requestAnimationFrame(step);
+    // --- NATIVE SCROLL ENGINE ---
+    window.customSmoothScrollGlobal = function(targetY) {
+        window.scrollTo({
+            top: targetY,
+            behavior: 'smooth'
+        });
     };
 
     window.scrollToTopGlobal = function() {
-        window.customSmoothScrollGlobal(0, 300);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
     window.scrollToSectionGlobal = function(selector) {
         const target = document.querySelector(selector);
         if (!target) return;
-        const targetY = target.getBoundingClientRect().top + window.pageYOffset - 80;
-        window.customSmoothScrollGlobal(targetY, 300);
+        const offset = 80; // Header height
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = target.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     };
 
-    window.addEventListener('wheel', (e) => {
-        // Dynamic check for pages where snapping should be disabled
-        const p = window.location.pathname.toLowerCase();
-        
-        // Disable on Catalog, News, Product, and Contacts pages to match Stitch_2 behavior
-        const isExcluded = p.includes('_5') || p.includes('news') ||
-                          p.includes('cart') || p.includes('cabinet') ||
-                          p.includes('_1') || p.includes('product');
+    // Removed custom scroll snap engine to allow natural fluid scrolling as per user request
 
-        // On mobile, generally disable snapping EXCEPT for _6, _8 and hi_tech_style where we want specific behavior
-        if (window.innerWidth <= 768 && !p.includes('_6') && !p.includes('_8') && !p.includes('hi_tech_style')) {
-            if (isExcluded) return;
-            return;
-        }
-        if (isExcluded && window.innerWidth > 768) return;
-
-        // Special logic for Homepage (hi_tech_style): snap Hero -> PowerDetails, then free scroll
-        if (p.includes('hi_tech_style')) {
-            const powerDetails = document.getElementById('power-details');
-            if (powerDetails && window.innerWidth <= 768) {
-                if ((e.deltaY > 0 && window.scrollY > 50) || 
-                    (e.deltaY < 0 && window.scrollY > powerDetails.offsetTop + 50)) {
-                    return;
-                }
-            }
-        }
-
-        // Special logic for Contacts page (_8), Fleet (_4), Certificates (_2), and History (_7): normal scroll after first content section
-        if (p.includes('_8') || p.includes('_4') || p.includes('_2') || p.includes('_7')) {
-            const detailsId = p.includes('_8') ? 'contact-details' : 
-                            (p.includes('_4') ? 'fleet-details' : 
-                            (p.includes('_2') ? 'cert-gallery' : 'aesthetics'));
-            const details = document.getElementById(detailsId);
-            if (details) {
-                if ((e.deltaY > 0 && window.scrollY > 50) || 
-                    (e.deltaY < 0 && window.scrollY > details.offsetTop + 50)) {
-                    return;
-                }
-            }
-        }
-
-
-
-        // Special logic for Cutting page (_6):
-        if (p.includes('_6')) {
-            const stats = document.getElementById('precision-stats');
-            if (stats) {
-                // On Mobile: snap only between Hero and Stats
-                if (window.innerWidth <= 768) {
-                    if ((e.deltaY > 0 && window.scrollY > 50) || 
-                        (e.deltaY < 0 && window.scrollY > stats.offsetTop + 50)) {
-                        return;
-                    }
-                }
-                // On PC: allow global snap engine to handle all sections (don't return)
-            }
-        }
-
-
-
-        // Disable snapping if search, cart or auth drawers are open
-        if (document.getElementById('globalSearchOverlay')?.classList.contains('active-search') || 
-            document.getElementById('cartPanelGlobal')?.classList.contains('translate-x-0') ||
-            document.getElementById('authPanelGlobal')?.classList.contains('translate-x-0')) {
-            return; 
-        }
-        
-        const now = Date.now();
-        if (isScrollingGlobal || now - lastScrollTimeGlobal < 100) {
-            if (Math.abs(e.deltaY) > 2) e.preventDefault();
-            return;
-        }
-
-        // Free scroll up from footer to forms section
-        if (e.deltaY < 0) {
-            const forms = document.getElementById('forms-section');
-            if (forms && window.scrollY > forms.offsetTop - 50) {
-                return;
-            }
-        }
-        if (Math.abs(e.deltaY) > 5) {
-            e.preventDefault();
-            lastScrollTimeGlobal = now;
-            
-            const snapTargets = Array.from(document.querySelectorAll('section, footer'))
-                .filter(s => s.offsetHeight > 150); 
-
-            let target = null;
-            if (e.deltaY > 0) {
-                // Scroll Down: Find first section whose top is below the header
-                target = snapTargets.find(s => s.getBoundingClientRect().top > 85);
-            } else {
-                // Scroll Up: Find last section whose top is above the header
-                const reversed = [...snapTargets].reverse();
-                target = reversed.find(s => s.getBoundingClientRect().top < -85);
-            }
-            
-            if (target) {
-                const targetY = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                window.customSmoothScrollGlobal(targetY, 600);
-            }
-        }
-    }, { passive: false });
 
 
     window.checkAnyPopupOpenGlobal = function() {
@@ -1575,7 +1603,15 @@ document.addEventListener('DOMContentLoaded', function() {
             popupObserver.observe(el, { attributes: true, attributeFilter: ['class'] });
         }
     });
-});
+    };
+
+    // Robust Injection: Handle cases where script runs before body is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', injectUI);
+    } else {
+        injectUI();
+    }
+
 
 
 
@@ -1979,4 +2015,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     observer.observe(document.body, { childList: true, subtree: true });
-});
+})();

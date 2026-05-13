@@ -3,6 +3,9 @@
 <html class="dark" lang="ru"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -138,13 +141,33 @@
       }
       
       /* Local styles end */
+      
+      /* Mobile Snapping & PC Normalization */
+      @media (max-width: 768px) {
+        html {
+          scroll-snap-type: y proximity;
+          scroll-behavior: smooth;
+        }
+        .snap-section {
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+        }
+      }
+      
+      @media (min-width: 769px) {
+        .pc-natural-height {
+          min-height: auto !important;
+          padding-top: 120px !important;
+          padding-bottom: 120px !important;
+        }
+      }
       </style>
 </head>
 <body class="bg-background text-on-background font-body-md">
 <!-- Shared Header will be injected here -->
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<section class="relative min-h-screen pc-natural-height snap-section flex items-center pt-20">
 <div class="absolute inset-0 z-0">
 <img class="w-full h-full object-cover opacity-30 transition-all duration-1000 scale-105" data-alt="Профессиональный металлопрокат" src="/images/beams.png"/>
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
@@ -157,7 +180,7 @@
                 Поставляем высококачественный металлопрокат для амбициозных проектов. Точность до миллиметра, надежность на века.
             </p>
 <div class="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4">
-<a href="/_5/code.html" class="pink-slide px-10 py-4 bg-transparent border border-primary text-primary font-label-caps text-label-caps z-10 hover:text-surface transition-colors duration-500 rounded-none tracking-widest inline-block text-center no-underline">
+<a href="/catalog" class="pink-slide px-10 py-4 bg-transparent border border-primary text-primary font-label-caps text-label-caps z-10 hover:text-surface transition-colors duration-500 rounded-none tracking-widest inline-block text-center no-underline">
                             СМОТРЕТЬ КАТАЛОГ
                         </a>
 </div>
@@ -180,7 +203,7 @@
 </div>
 </section>
 <!-- About Summary Section -->
-<section id="power-details" class="h-screen max-h-screen overflow-hidden flex flex-col justify-center px-margin-edge-mobile md:px-margin-edge w-full max-w-container-max mx-auto py-10">
+<section id="power-details" class="min-h-screen pc-natural-height snap-section flex flex-col justify-center px-margin-edge-mobile md:px-margin-edge w-full max-w-container-max mx-auto py-10">
 <div class="asymmetric-grid">
 <div class="col-span-12 md:col-span-5 space-y-8">
 <h2 class="text-[36px] leading-tight md:text-headline-lg font-headline-lg text-on-surface uppercase">СИЛА В<br/>ДЕТАЛЯХ</h2>
@@ -203,7 +226,7 @@
 </div>
 <div class="col-span-12 md:col-start-7 md:col-span-6 relative mt-12 md:mt-0">
 <div class="aspect-video md:aspect-[4/5] h-full max-h-[60vh] overflow-hidden border border-outline-variant/20">
-<img class="w-full h-full object-cover zoom-image transition-transform duration-1000 ease-out" data-alt="Металлообработка" src="/images/stainless_steel_product.png"/>
+<img class="w-full h-full object-cover zoom-image transition-transform duration-1000 ease-out" data-alt="Металлообработка" src="/images/stainless_steel_product.png" loading="lazy"/>
 </div>
 <div class="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-10 p-6 md:p-8 bg-surface border border-outline-variant/20 max-w-[240px] md:max-w-xs shadow-2xl">
 <p class="font-body-md text-body-md text-on-surface italic">
@@ -215,19 +238,19 @@
 </div>
 </section>
 <!-- Popular Categories - Bento Grid Style -->
-<section id="popular-categories" class="min-h-screen md:h-screen md:max-h-screen overflow-y-auto md:overflow-hidden flex flex-col justify-center bg-surface-container-lowest border-y border-outline-variant/10 py-20 md:py-10">
+<section id="popular-categories" class="min-h-screen pc-natural-height flex flex-col justify-center bg-surface-container-lowest border-y border-outline-variant/10 py-20 md:py-10">
 <div class="px-margin-edge-mobile md:px-margin-edge w-full max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
 <h2 class="text-[36px] leading-tight md:text-headline-lg font-headline-lg uppercase">ПОПУЛЯРНЫЕ<br/>КАТЕГОРИИ</h2>
-<a href="/_5/code.html" class="font-label-caps text-label-caps text-primary flex items-center gap-2 group tracking-widest no-underline">
+<a href="/catalog" class="font-label-caps text-label-caps text-primary flex items-center gap-2 group tracking-widest no-underline">
                         ВЕСЬ КАТАЛОГ <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </a>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Category 1 -->
-<a href="/_5/code?pcat=Черный металлопрокат&cat=Арматура" class="group relative h-[300px] md:h-[50vh] max-h-[500px] overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Арматура" src="/images/rebar.png"/>
+<a href="/catalog?pcat=Черный металлопрокат&cat=Арматура" class="group relative h-[300px] md:h-[50vh] max-h-[500px] overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Арматура" src="/images/rebar.png" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
 <span class="font-label-caps text-label-caps text-primary mb-2 block tracking-widest">01 //</span>
@@ -240,8 +263,8 @@
 
 <div class="grid grid-rows-1 md:grid-rows-2 gap-6">
 <!-- Category 2 -->
-<a href="/_5/code?pcat=Трубный металлопрокат" class="group relative h-[300px] md:h-auto overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Трубы" src="/images/tubes.png"/>
+<a href="/catalog?pcat=Трубный металлопрокат" class="group relative h-[300px] md:h-auto overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Трубы" src="/images/tubes.png" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-6 md:p-8">
 <span class="font-label-caps text-label-caps text-primary mb-2 block tracking-widest">02 //</span>
@@ -250,8 +273,8 @@
 </div>
 </a>
 <!-- Category 3 -->
-<a href="/_5/code?pcat=Листовой металлопрокат" class="group relative h-[300px] md:h-auto overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Листы" src="/images/sheets.png"/>
+<a href="/catalog?pcat=Листовой металлопрокат" class="group relative h-[300px] md:h-auto overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Листы" src="/images/sheets.png" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-6 md:p-8">
 <span class="font-label-caps text-label-caps text-primary mb-2 block tracking-widest">03 //</span>
@@ -262,8 +285,8 @@
 </div>
 
 <!-- Category 4 -->
-<a href="/_5/code?pcat=Кровля и фасад" class="group relative h-[300px] md:h-[50vh] max-h-[500px] overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Профнастил" src="/images/angles.png"/>
+<a href="/catalog?pcat=Кровля и фасад" class="group relative h-[300px] md:h-[50vh] max-h-[500px] overflow-hidden border border-outline-variant/20 bg-surface block no-underline text-inherit cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Профнастил" src="/images/angles.png" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
 <span class="font-label-caps text-label-caps text-primary mb-2 block tracking-widest">04 //</span>
@@ -285,7 +308,7 @@
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/_6/code.html">
+<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/services">
 <span class="material-symbols-outlined text-headline-md text-primary mb-8 block font-light">precision_manufacturing</span>
 <h4 class="font-label-caps text-label-caps text-on-surface mb-4 tracking-wider">ТОЧНОСТЬ РЕЗКИ</h4>
 <p class="text-on-surface-variant text-body-md opacity-80">Используем лазерное оборудование последнего поколения для идеального среза.</p>
@@ -294,7 +317,7 @@
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </div>
 </a>
-<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/_2/code.html">
+<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/certificates">
 <span class="material-symbols-outlined text-headline-md text-primary mb-8 block font-light">workspace_premium</span>
 <h4 class="font-label-caps text-label-caps text-on-surface mb-4 tracking-wider">СЕРТИФИКАТЫ</h4>
 <p class="text-on-surface-variant text-body-md opacity-80">Каждая партия проходит строгий лабораторный контроль на соответствие ГОСТ.</p>
@@ -303,7 +326,7 @@
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </div>
 </a>
-<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/_4/code.html">
+<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/logistics">
 <span class="material-symbols-outlined text-headline-md text-primary mb-8 block font-light">local_shipping</span>
 <h4 class="font-label-caps text-label-caps text-on-surface mb-4 tracking-wider">СВОЙ АВТОПАРК</h4>
 <p class="text-on-surface-variant text-body-md opacity-80">Гарантируем доставку в день заказа благодаря собственному логистическому хабу.</p>
@@ -312,7 +335,7 @@
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </div>
 </a>
-<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/_1/code.html">
+<a class="block p-8 border border-outline-variant/20 transition-all duration-500 group bg-surface hover:bg-surface-container-high cursor-pointer no-underline text-inherit" href="/calculator">
 <span class="material-symbols-outlined text-headline-md text-primary mb-8 block font-light">calculate</span>
 <h4 class="font-label-caps text-label-caps text-on-surface mb-4 tracking-wider">КАЛЬКУЛЯТОР</h4>
 <p class="text-on-surface-variant text-body-md opacity-80">Мгновенный расчет веса и стоимости металлопроката онлайн.</p>

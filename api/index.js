@@ -149,10 +149,10 @@ app.post('/api/auth/register', async (req, res) => {
 
 // Email
 const transporter = nodemailer.createTransport({
-  host: 'smtp.mail.ru', port: 465, secure: true,
-  auth: { user: 'egapega322@mail.ru', pass: process.env.SMTP_PASS }
+  host: 'smtp.gmail.com', port: 465, secure: true,
+  auth: { user: 'egapega322@gmail.com', pass: process.env.SMTP_PASS }
 });
-const ADMIN_EMAILS = process.env.ADMIN_EMAILS ? process.env.ADMIN_EMAILS.split(',').map(e => e.trim()) : ['info@steelwoodman.ru', 'egapega1337@gmail.com', 'egapega322@mail.ru'];
+const ADMIN_EMAILS = process.env.ADMIN_EMAILS ? process.env.ADMIN_EMAILS.split(',').map(e => e.trim()) : ['info@steelwoodman.ru', 'egapega1337@gmail.com', 'egapega322@gmail.com'];
 
 // API: Orders
 app.post('/api/orders', async (req, res) => {
@@ -170,7 +170,7 @@ app.post('/api/orders', async (req, res) => {
 
   const itemsHtml = items.map(item => `<li>${item.name || item.id} x ${item.quantity} - ${item.price} ₽</li>`).join('');
   transporter.sendMail({
-    from: 'egapega322@mail.ru', to: ADMIN_EMAILS.join(', '),
+    from: 'egapega322@gmail.com', to: ADMIN_EMAILS.join(', '),
     subject: `Новый заказ #${order.id}`,
     html: `<h2>Заказ #${order.id}</h2><p>Клиент: ${name}</p><ul>${itemsHtml}</ul>`
   }).catch(e => console.error(e));
@@ -196,7 +196,7 @@ app.post('/api/leads', async (req, res) => {
   }
 
   transporter.sendMail({
-    from: 'egapega322@mail.ru', to: ADMIN_EMAILS.join(', '),
+    from: 'egapega322@gmail.com', to: ADMIN_EMAILS.join(', '),
     subject: `Новая заявка: ${type || 'Контакт'}`,
     html: `
       <h2>Новая заявка с сайта</h2>
@@ -224,7 +224,7 @@ app.post('/api/subscribers', async (req, res) => {
   if (error && error.code !== '23505') return res.status(500).json({ error: error.message });
 
   transporter.sendMail({
-    from: 'egapega322@mail.ru', to: ADMIN_EMAILS.join(', '),
+    from: 'egapega322@gmail.com', to: ADMIN_EMAILS.join(', '),
     subject: `Новая подписка на рассылку`,
     html: `<p>Новый подписчик: <b>${email}</b></p>`
   }).catch(e => console.error(e));

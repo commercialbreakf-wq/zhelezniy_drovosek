@@ -123,8 +123,8 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary/30 overflow-x-hidden">
+<!-- Shared Header injected by shared-ui.js -->
 
-<div id="globalHeader"></div>
 
 <main>
     <!-- SCREEN 1: Hero & Stats -->
@@ -183,9 +183,9 @@
             </div>
         </div>
         
-        <div id="certGrid" class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-gutter transition-all duration-300 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+        <div id="certGrid" class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-gutter transition-all duration-300 overflow-x-auto md:overflow-visible no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
             <!-- Card 1 -->
-            <div onclick="window.location.href='/certificates/certificate_view?category=Нержавеющая сталь&standard=ГОСТ 5632-2014'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto snap-center" data-category="stainless">
+            <div onclick="window.location.href='/certificates/certificate_view?category=Нержавеющая сталь&standard=ГОСТ 5632-2014'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto" data-category="stainless">
                 <div class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] bg-surface-container-highest flex items-center justify-center p-6 lg:p-8 relative overflow-hidden">
                     <img alt="Нержавеющая сталь" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500" src="/images/cert_stainless.png"/>
                     <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -202,7 +202,7 @@
                 </div>
             </div>
             <!-- Card 2 -->
-            <div onclick="window.location.href='/certificates/certificate_view?category=Менеджмент качества&standard=ISO 9001:2015'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto snap-center" data-category="stainless">
+            <div onclick="window.location.href='/certificates/certificate_view?category=Менеджмент качества&standard=ISO 9001:2015'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto" data-category="stainless">
                 <div class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] bg-surface-container-highest flex items-center justify-center p-6 lg:p-8 relative overflow-hidden">
                     <img alt="ISO 9001:2015" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500" src="/images/cert_iso9001.png"/>
                     <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -219,7 +219,7 @@
                 </div>
             </div>
             <!-- Card 3 -->
-            <div onclick="window.location.href='/certificates/certificate_view.html?category=Алюминиевые сплавы&standard=ГОСТ 4784-97'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto snap-center" data-category="aluminum">
+            <div onclick="window.location.href='/certificates/certificate_view.html?category=Алюминиевые сплавы&standard=ГОСТ 4784-97'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto" data-category="aluminum">
                 <div class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] bg-surface-container-highest flex items-center justify-center p-6 lg:p-8 relative overflow-hidden">
                     <img alt="Алюминиевые сплавы" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500" src="/images/cert_aluminum.png"/>
                     <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -236,7 +236,7 @@
                 </div>
             </div>
             <!-- Card 4 -->
-            <div onclick="window.location.href='/certificates/certificate_view.html?category=Углеродистая сталь&standard=ГОСТ 380-2005'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto snap-center" data-category="carbon">
+            <div onclick="window.location.href='/certificates/certificate_view.html?category=Углеродистая сталь&standard=ГОСТ 380-2005'" class="cert-card machined-border bg-surface-container overflow-hidden group industrial-glow w-[280px] shrink-0 md:w-auto" data-category="carbon">
                 <div class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] bg-surface-container-highest flex items-center justify-center p-6 lg:p-8 relative overflow-hidden">
                     <img alt="Углеродистая сталь" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500" src="/images/cert_carbon.png"/>
                     <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -256,7 +256,7 @@
     </section>
 
     <!-- SCREEN 3: Internal Quality Center -->
-    <section class="min-h-screen md:min-h-screen flex items-center bg-surface-container-lowest border-y machined-border overflow-hidden">
+    <section class="flex items-center bg-surface-container-lowest border-y machined-border overflow-hidden py-20">
         <div class="max-w-[1440px] mx-auto px-margin-edge grid grid-cols-1 lg:grid-cols-2 items-center gap-12 md:gap-16 w-full py-20 md:py-10">
             <div>
                 <span class="text-primary font-label-caps text-xs md:text-label-caps tracking-[0.3em] mb-4 block uppercase">ЛАБОРАТОРНЫЙ КОНТРОЛЬ</span>
@@ -290,7 +290,7 @@
     </section>
 
     <!-- SCREEN 4: CTA & Footer & Legal -->
-    <section class="min-h-screen flex flex-col justify-between bg-surface-container-lowest border-t machined-border">
+    <section class="flex flex-col justify-between bg-surface-container-lowest border-t machined-border py-20">
         <div class="flex-grow flex items-center px-margin-edge max-w-[1440px] mx-auto w-full py-12">
             <div class="bg-primary text-on-primary-fixed p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-12 w-full machined-border shadow-2xl">
                 <div class="relative z-10 max-w-xl">

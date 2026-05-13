@@ -84,7 +84,6 @@
         .no-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
-            scroll-snap-type: x mandatory;
         }
 
 
@@ -97,8 +96,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .fleet-card {
-            scroll-snap-align: center;
         }
+
 
         /* Card height normalization */
         .vehicle-card {
@@ -170,7 +169,7 @@
     </section>
 
     <!-- Fleet Details Section (Slider) -->
-    <section id="fleet-details" class="bg-surface-container-low min-h-screen flex flex-col pt-24 pb-12">
+    <section id="fleet-details" class="bg-surface-container-low py-24 flex flex-col">
         <div class="px-margin-edge-mobile md:px-margin-edge max-w-container-max mx-auto w-full">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6">
                 <div>
@@ -186,11 +185,11 @@
             <!-- Vehicle Cards Grid/Slider -->
 
             <!-- Horizontal Slider -->
-            <div id="vehicle-slider" class="flex gap-6 overflow-x-auto snap-x no-scrollbar -mx-margin-edge-mobile px-margin-edge-mobile md:mx-0 md:px-0 pb-10 items-stretch">
+            <div id="vehicle-slider" class="flex gap-6 overflow-x-auto no-scrollbar -mx-margin-edge-mobile px-margin-edge-mobile md:mx-0 md:px-0 pb-10 items-stretch">
                 <!-- Vehicle Card 1: Rebar -->
-                <div class="min-w-[85%] md:min-w-[32%] snap-center group h-auto fleet-card">
-                    <div class="machined-border bg-surface-container overflow-hidden rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
-                        <div class="aspect-[16/10] overflow-hidden relative flex-shrink-0">
+                <div class="min-w-[85%] md:min-w-[32%] group h-auto fleet-card">
+                    <div class="machined-border bg-surface-container  rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
+                        <div class="aspect-[16/10]  relative flex-shrink-0">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/fleet/rebar.png" alt="Перевозка арматуры"/>
                             <div class="absolute top-4 right-4 px-3 py-1 liquid-glass rounded-full text-[10px] font-bold text-primary uppercase">АРМАТУРА</div>
                         </div>
@@ -208,9 +207,9 @@
                 </div>
 
                 <!-- Vehicle Card 2: Beam -->
-                <div class="min-w-[85%] md:min-w-[32%] snap-center group h-auto fleet-card">
-                    <div class="machined-border bg-surface-container overflow-hidden rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
-                        <div class="aspect-[16/10] overflow-hidden relative flex-shrink-0">
+                <div class="min-w-[85%] md:min-w-[32%] group h-auto fleet-card">
+                    <div class="machined-border bg-surface-container  rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
+                        <div class="aspect-[16/10]  relative flex-shrink-0">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/fleet/beam_manipulator.png" alt="Перевозка балок"/>
                             <div class="absolute top-4 right-4 px-3 py-1 liquid-glass rounded-full text-[10px] font-bold text-primary uppercase">БАЛКА И ШВЕЛЛЕР</div>
                         </div>
@@ -228,9 +227,9 @@
                 </div>
 
                 <!-- Vehicle Card 3: Sheet -->
-                <div class="min-w-[85%] md:min-w-[32%] snap-center group h-auto fleet-card">
-                    <div class="machined-border bg-surface-container overflow-hidden rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
-                        <div class="aspect-[16/10] overflow-hidden relative flex-shrink-0">
+                <div class="min-w-[85%] md:min-w-[32%] group h-auto fleet-card">
+                    <div class="machined-border bg-surface-container  rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
+                        <div class="aspect-[16/10]  relative flex-shrink-0">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/fleet/sheets.png" alt="Перевозка листов"/>
                             <div class="absolute top-4 right-4 px-3 py-1 liquid-glass rounded-full text-[10px] font-bold text-primary uppercase">ЛИСТОВОЙ ПРОКАТ</div>
                         </div>
@@ -248,9 +247,9 @@
                 </div>
 
                 <!-- Vehicle Card 4: Pipe -->
-                <div class="min-w-[85%] md:min-w-[32%] snap-center group h-auto fleet-card">
-                    <div class="machined-border bg-surface-container overflow-hidden rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
-                        <div class="aspect-[16/10] overflow-hidden relative flex-shrink-0">
+                <div class="min-w-[85%] md:min-w-[32%] group h-auto fleet-card">
+                    <div class="machined-border bg-surface-container  rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
+                        <div class="aspect-[16/10]  relative flex-shrink-0">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/fleet/pipes.png" alt="Перевозка труб"/>
                             <div class="absolute top-4 right-4 px-3 py-1 liquid-glass rounded-full text-[10px] font-bold text-primary uppercase">ТРУБНЫЙ ПРОКАТ</div>
                         </div>
@@ -268,9 +267,9 @@
                 </div>
 
                 <!-- Vehicle Card 5: Corrugated -->
-                <div class="min-w-[85%] md:min-w-[32%] snap-center group h-auto fleet-card">
-                    <div class="machined-border bg-surface-container overflow-hidden rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
-                        <div class="aspect-[16/10] overflow-hidden relative flex-shrink-0">
+                <div class="min-w-[85%] md:min-w-[32%] group h-auto fleet-card">
+                    <div class="machined-border bg-surface-container  rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
+                        <div class="aspect-[16/10]  relative flex-shrink-0">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/fleet/corrugated.png" alt="Доставка профнастила"/>
                             <div class="absolute top-4 right-4 px-3 py-1 liquid-glass rounded-full text-[10px] font-bold text-primary uppercase">КРОВЛЯ И ФАСАД</div>
                         </div>
@@ -288,9 +287,9 @@
                 </div>
 
                 <!-- Vehicle Card 6: Mesh -->
-                <div class="min-w-[85%] md:min-w-[32%] md:snap-center group h-auto fleet-card">
-                    <div class="machined-border bg-surface-container overflow-hidden rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
-                        <div class="aspect-[16/10] overflow-hidden relative flex-shrink-0">
+                <div class="min-w-[85%] md:min-w-[32%] group h-auto fleet-card">
+                    <div class="machined-border bg-surface-container  rounded-2xl transition-all duration-500 hover:border-primary/50 vehicle-card h-full">
+                        <div class="aspect-[16/10]  relative flex-shrink-0">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/fleet/mesh.png" alt="Быстрая доставка"/>
                             <div class="absolute top-4 right-4 px-3 py-1 liquid-glass rounded-full text-[10px] font-bold text-primary uppercase">ЭКСПРЕСС-ДОСТАВКА</div>
                         </div>
@@ -336,7 +335,7 @@
                     </ul>
                 </div>
                 <div class="lg:col-span-7 relative">
-                    <div class="aspect-square md:aspect-video machined-border rounded-[2.5rem] overflow-hidden grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
+                    <div class="aspect-square md:aspect-video machined-border rounded-[2.5rem]  grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
                         <iframe src="https://yandex.ru/map-widget/v1/?ll=37.617635%2C55.755814&z=5&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDAwMBIY0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2S5hhCFYFpX0I%2C&l=map" width="100%" height="100%" frameborder="0"></iframe>
                     </div>
                     <div class="absolute -top-6 -right-6 p-8 liquid-glass rounded-2xl hidden md:block">
@@ -349,7 +348,7 @@
     </section>
 
     <!-- Final CTA & Footer Section -->
-    <section class="min-h-screen md:min-h-screen flex flex-col justify-between bg-background overflow-y-auto">
+    <section class="flex flex-col justify-between bg-background py-20">
         <div class="flex-1 flex items-center justify-center px-margin-edge-mobile md:px-margin-edge max-w-container-max mx-auto text-center py-20">
             <div class="max-w-4xl mx-auto space-y-8 md:space-y-12">
                 <h2 class="text-4xl md:text-8xl font-display-xl uppercase leading-[0.9]">ГОТОВЫ К<br/><span class="text-primary">ПЕРЕВОЗКЕ?</span></h2>

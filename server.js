@@ -5,6 +5,8 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const compression = require('compression');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,6 +14,8 @@ const db = new sqlite3.Database(path.join(__dirname, 'database.sqlite'));
 const SECRET_KEY = 'iron-woodman-secret';
 
 app.use(cors());
+app.use(compression());
+app.use(cookieParser());
 app.use(express.json());
 
 // Logging & Clean URL Middleware
@@ -33,9 +37,15 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve static files from the project root with .html extension support
+// Serve static files with aggressive caching (7 days for assets)
 app.use(express.static(path.join(__dirname), {
-  extensions: ['html']
+  extensions: ['html'],
+  maxAge: '7d',
+  setHeaders: (res, path) => {
+    if (path.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'public, max-age=3600'); // 1 hour for HTML
+    }
+  }
 }));
 
 // Specific route for catalog
@@ -254,6 +264,9 @@ app.post('/api/auth/login', (req, res) => {
     }
     
     const token = jwt.sign({ id: user.id, email: user.email }, SECRET_KEY, { expiresIn: '24h' });
+    // Set cookie
+    res.cookie('metal_token', token, { maxAge: 24 * 60 * 60 * 1000, path: '/' });
+    
     res.json({ 
       user: { 
         id: user.id, 
@@ -284,6 +297,9 @@ app.post('/api/auth/register', (req, res) => {
       return res.status(500).json({ error: err.message });
     }
     const token = jwt.sign({ id: this.lastID, email }, SECRET_KEY);
+    // Set cookie
+    res.cookie('metal_token', token, { maxAge: 30 * 24 * 60 * 60 * 1000, path: '/' });
+    
     res.json({ 
       user: { id: this.lastID, email, name, phone: null, role: 'user' }, 
       token 
@@ -295,12 +311,12 @@ const nodemailer = require('nodemailer');
 
 // Email configuration (Mock for now, but configured for SMTP)
 const transporter = nodemailer.createTransport({
-  host: 'smtp.mail.ru', // Adjust as needed
+  host: 'smtp.gmail.com', // Adjust as needed
   port: 465,
   secure: true,
   auth: {
-    user: 'info@steelwoodman.ru', // User's email
-    pass: 'your-app-password' // Should be an environment variable
+    user: 'egapega322@gmail.com', // User's email
+    pass: process.env.SMTP_PASS || 'n9CBCOuWpzfJLYuDw9d0' // Should be an environment variable
   }
 });
 
@@ -418,8 +434,8 @@ app.post('/api/orders', authenticateToken, async (req, res) => {
     // Prepare email content
     const itemsHtml = items.map(item => `<li>${item.name || item.id} x ${item.quantity} - ${item.price} ₽</li>`).join('');
     const mailOptions = {
-      from: 'info@steelwoodman.ru',
-      to: 'info@steelwoodman.ru',
+      from: 'egapega322@gmail.com',
+      to: process.env.ADMIN_EMAILS || 'egapega322@gmail.com',
       subject: `Новый заказ #${orderId} - ${name}`,
       html: `
         <h2>Новый заказ на сайте</h2>
@@ -470,8 +486,8 @@ app.post('/api/leads', (req, res) => {
     const leadId = this.lastID;
 
     const mailOptions = {
-      from: 'info@steelwoodman.ru',
-      to: 'info@steelwoodman.ru',
+      from: 'egapega322@gmail.com',
+      to: process.env.ADMIN_EMAILS || 'egapega322@gmail.com',
       subject: `Заявка №${leadId} ${phone}`,
       text: `Новая заявка на сайте\n\nНомер: ${leadId}\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email}\nТип: ${type}\nСообщение: ${message}`,
       html: `

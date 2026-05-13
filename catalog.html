@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <title>Каталог металлопроката — ЖЕЛЕЗНЫЙ ДРОВОСЕК</title>
 <meta name="description" content="Полный каталог металлопроката: арматура, трубы, листовой прокат, балки, швеллеры, профнастил. Актуальные цены, наличие на складе."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -47,6 +50,7 @@ tailwind.config = {
 .pink-glow:hover{box-shadow:0 0 20px rgba(255,176,204,0.15)}
 .card-enter{animation:cardIn .5s cubic-bezier(.16,1,.3,1) both}
 @keyframes cardIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+html { scroll-behavior: smooth; }
 </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">

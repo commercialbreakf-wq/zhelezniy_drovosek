@@ -133,9 +133,9 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
 <!-- Shared Header -->
-<main class="min-h-screen">
+<main>
 <!-- Hero Section -->
-<section id="hero" class="relative h-screen flex flex-col border-b machined-border bg-background overflow-hidden">
+<section id="hero" class="relative py-20 md:py-32 flex flex-col border-b machined-border bg-background ">
     <div class="absolute inset-0 z-0">
         <img alt="Industrial Facility" class="w-full h-full object-cover grayscale opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbXTvW2oixr9-eQg-7brjPngDVA3y1BGv3ouFmRST6Y4VG3kWJTSvgrtlgCoh082z45DY3-EBK-ckPzbST4935hFkm4KIQ4nNtm5qzxW-0MSjjBgW7TwGuZbQSipnTHnwylNB_kYdeSJD8jbkGEkHwzF7m3DpdX38WgzGB-HupfOeh1DnKspoWtGtzBlteabeiDGWztwSMhixbqhiypwtY3mS0RqI8D7qHo21SXfJ0vpsKVgdACKWse72GJF47aQSdBg1WqAj2koY"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
@@ -185,7 +185,7 @@
 </div>
 </div>
 </div>
-<div class="bg-surface-container-low machined-border p-stack-lg relative overflow-hidden group flex-1">
+<div class="bg-surface-container-low machined-border p-stack-lg relative  group flex-1">
 <img alt="Logistics Center" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFJgXFGlh5hiMBw1X-Lrtw9ZwCZobP2960PrhVEQDtSFaHHpsrfmv-cPeN-StLWc5Yq6RjHc7199o5859nJkCBT0mahHpe0YLCmU1AKg5kRW0oOqU3Iv-2CuQFd3U3r86jNM0BRT88KFtcIu5peWkCE0kGSJxW2LkEXqILXUhzCf1ZpE6eufJwlDlZmvj5LqzxQl4lfSwooFBtHcCI8znrqeHdOhx9LC6QOni3ekXbHScUD15qYbch8jGBAY0AnO8v8rHHZYRFK5M"/>
 <div class="relative z-10">
 <h3 class="font-headline-md text-headline-md text-primary uppercase mb-stack-md">Северный склад</h3>
@@ -207,12 +207,16 @@
 <!-- Interaction Column -->
 <div class="lg:col-span-8 space-y-gutter">
 <!-- Map Placeholder -->
-<div class="relative h-[500px] machined-border overflow-hidden bg-surface-container-low">
+<div class="relative h-[500px] machined-border  bg-surface-container-low">
 <!-- Custom Styled Map Representation -->
 <div class="relative group">
     <div class="absolute -inset-1 bg-gradient-to-r from-primary/40 to-primary/20 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-    <div class="relative machined-border overflow-hidden rounded-2xl bg-surface-container h-[500px]">
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.141121%2C59.789123&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQ0NDU0NBJI0KDQvtGB0YHQuNGPLCDQm9C10L3QuNC90LPRgNCw0LTRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0JvQvtC80L7QvdC-0YHQvtCy0YHQutC40Lkg0YDQsNC50L7QvSwg0JLQuNC70LvQvtC30YHQutC-0LUg0LPQvtGA0L7QtNGB0LrQvtC1INC_0L7RgdC10LvQtdC90LjQtSwg0K7QttC90LDRjyDRh9Cw0YHRgtGMINC_0YDQvtC80LfQvtC90Ysg0JPQvtGA0LXQu0-0LLQviwg0JLQvtC70YXQvtC90YHQutC-0LUg0YjQvtGB0YHQtSwgNCIKDYpZGEIVXmteQg%2C%2C&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative; filter: contrast(1.1) saturate(1.1);"></iframe>
+    <div class="relative machined-border rounded-2xl bg-surface-container h-[500px] overflow-hidden">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.191838%2C59.781405&z=17&pt=30.191838%2C59.781405%2Cpm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative; filter: contrast(1.1) saturate(1.1);"></iframe>
+        <a href="https://yandex.ru/maps/-/CHBn6Y4X" target="_blank" class="absolute bottom-6 right-6 bg-primary text-on-primary-fixed px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 hover:bg-primary-container transition-all shadow-2xl z-10 hover:scale-105 active:scale-95 uppercase tracking-wider">
+            <span class="material-symbols-outlined text-lg">map</span>
+            Открыть в Яндекс Картах
+        </a>
     </div>
 </div>
 </div>
